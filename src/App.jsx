@@ -5,6 +5,7 @@ import LogoBlock from "./components/LogoBlock.jsx";
 import FontDropdown from "./components/FontDropdown.jsx";
 import ColourPicker from "./components/ColourPicker.jsx";
 import { fontOptions } from './fontOptions.jsx';
+import { iconOptions } from './iconOptions.jsx';
 
 function App() {
 
@@ -37,16 +38,24 @@ function App() {
   }, [logoFont]);  // Dependency array ensures this runs whenever logoFont changes
 
 
+  const [logoIcon, setLogoIcon] = useState(1);
+  const updateLogoIcon = (newIcon) => {
+    setLogoIcon(newIcon);
+  };
+
+
   const [fontColour, setFontColour] = useState("#000000"); 
   const updateFontColour = (newColour) => {
     setFontColour(newColour);
   };
 
 
+
   return (
     <>
       <div>
 
+      <div className="setup">
         <CompanyNameInput 
           companyName={companyName} 
           updateCompanyName={updateCompanyName} 
@@ -67,11 +76,13 @@ function App() {
           updateFontColour={updateFontColour}
         />
 
+    </div>
 
         <LogoBlock 
           companyName={companyName} 
           fontFamily={selectedFont?.fontfamily}
           fontColour={fontColour}
+          iconOptions={iconOptions}
         />
 
 

@@ -18,6 +18,25 @@ form {
   font-size: 30px;
   margin: 20px;
   text-align: center;
+  float: left;
+}
+/* Icon Style */
+.logo-block .icon {
+  display: flex;
+  align-items: center;
+}
+.logo-block .icon img {
+  margin-right: 10px;
+}
+
+/* Image Style */
+.logo-block .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-block .image img {
+  margin-bottom: 10px;
 }
 
 

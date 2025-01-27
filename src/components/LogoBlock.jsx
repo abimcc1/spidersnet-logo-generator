@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function LogoBlock({ companyName, fontFamily, fontColour }) {
+function LogoBlock({ companyName, fontFamily, fontColour, iconOptions }) {
 
 
     const dynamicStyle = {
@@ -9,14 +9,22 @@ function LogoBlock({ companyName, fontFamily, fontColour }) {
     }
 
 
-    console.log(fontColour);
+
     return (
       <> 
      
-        <div className="logo-block" style={dynamicStyle}>
+     {iconOptions.map((item) => (
 
-                {companyName}
-        </div>
+            <div className="logo-block" key={item.id} style={dynamicStyle}>
+              <div className={item.style}>
+             <img src={item.url} />
+            {companyName}
+            </div>
+            </div>
+          
+    ))}
+
+
       </>
     )
   
