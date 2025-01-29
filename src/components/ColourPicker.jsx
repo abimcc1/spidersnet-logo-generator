@@ -8,7 +8,6 @@ function ColourPicker({ fontColour, updateFontColour }) {
   
     return (
       <> 
-        <label>Choose text colour: </label>
           <input
             onChange={handleChange}
             value={fontColour}

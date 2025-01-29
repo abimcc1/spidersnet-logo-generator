@@ -8,14 +8,11 @@ function CompanyNameInput({ companyName, updateCompanyName }) {
   
     return (
       <> 
-   
-          <label>Enter company name: </label>
           <input
             onChange={handleChange}
             value={companyName}
-            placeholder="Company Name"
+            placeholder="Business Name"
           />
-
       </>
     )
   

@@ -8,9 +8,8 @@ function FontDropdown({ logoFont, updateLogoFont, fontOptions }) {
   
     return (
       <> 
-        <label>Choose font:</label>
-
         <select id="font" value={logoFont} onChange={handleChange}>
+          <option value="">Default</option>
         {fontOptions.map((item) => (
           <option key={item.id} value={item.id}>
             {item.name}

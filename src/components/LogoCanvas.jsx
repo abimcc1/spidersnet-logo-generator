@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
+function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fontFamily, fontColour }) {
 
   function WordWrapper({ text }) {
     // Split the text into words and wrap each word in a span
@@ -11,21 +11,22 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
   }
 
 
-  const handleLogoClick = (id) => {
-    setSelectedLogo(id);
-    navigateTo('screen4');
-  };
+      const dynamicStyle = {
+        fontFamily: fontFamily,
+        color: fontColour,
+    }
+
 
     return (
       <> 
 
 
 
-            <div className="logo-block" key={icon.id} onClick={() => handleLogoClick(icon.id)}>
+            <div className="logo-block" key={icon.id}>
               <div className="logo-block-inner">
                 <div className={icon.class}>
                     {icon.url && <img src={icon.url} />}
-                    <div className="company-name"><WordWrapper text={companyName} /></div>
+                    <div className="company-name" style={dynamicStyle}><WordWrapper text={companyName} /></div>
                     {icon.slogan && <div className="slogan">{slogan}</div>}
               </div>
               </div>
@@ -39,7 +40,7 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
   
   }
 
-  export default LogoBlock
+  export default LogoCanvas
 
 //   import { useState } from 'react'
 
