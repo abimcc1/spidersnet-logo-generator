@@ -13,7 +13,7 @@ select {
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
   appearance:none;
-  background: url("chevron-down.svg") no-repeat;
+  background: url("/chevron-down.svg") no-repeat;
   background-position: calc(100% - 10px) center;
 }
 h1, h2, h3, h4 {
@@ -362,7 +362,7 @@ body {
   background-color: #fff;
   font-size: 16px;
   padding-left: 15px;
-  background-image: url("chevron-down.svg");
+  background-image: url("/chevron-down.svg");
   background-repeat: no-repeat;
   background-position: calc(100% - 10px) center;
   box-sizing: border-box;
