@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { colorOptions } from '../colorOptions.jsx';
 
-function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fontFamily, fontColour }) {
+function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fontFamily, fontColour, accentColour }) {
 
   function WordWrapper({ text }) {
     // Split the text into words and wrap each word in a span
@@ -11,9 +12,52 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
   }
 
 
-      const dynamicStyle = {
-        fontFamily: fontFamily,
-        color: fontColour,
+  const [accentStyle, setAccentStyle] = useState('solid');
+  const [fontStyle, setFontStyle] = useState('solid');
+
+  const getAccentColourStyle = (color) => {
+    const colorMatch = colorOptions.find(item => item.code === color);
+    return colorMatch ? colorMatch.style : 'solid';
+  };
+  useEffect(() => {
+    const style = getAccentColourStyle(accentColour); 
+    setAccentStyle(style); 
+  }, [accentColour]);
+
+  const getFontColourStyle = (color) => {
+    const colorMatch = colorOptions.find(item => item.code === color);
+    return colorMatch ? colorMatch.style : 'solid';
+  };
+  useEffect(() => {
+    const style = getFontColourStyle(fontColour); 
+    setFontStyle(style); 
+  }, [fontColour]);
+
+  console.log(accentColour);
+
+    const dynamicIconStyle = {
+      ...(
+        accentColour !== "default" && {
+          backgroundColor: accentStyle === "solid" ? accentColour : "transparent", 
+          backgroundImage: accentStyle === "solid" ? "none" : accentColour, 
+        }
+      ),
+      maskImage: `url(${icon.url})`,
+      maskRepeat: "no-repeat",
+    }
+
+    console.log(fontColour);
+
+    const dynamicFontStyle = {
+      ...(
+        fontColour !== "default" && {
+          backgroundColor: fontStyle === "solid" ? fontColour : "transparent", 
+          backgroundImage: fontStyle === "solid" ? "none" : fontColour, 
+        }
+      ),
+      fontFamily: fontFamily,
+      backgroundSize: '100%', 
+      backgroundClip: 'text',
     }
 
 
@@ -25,8 +69,8 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
             <div className="logo-block" key={icon.id}>
               <div className="logo-block-inner">
                 <div className={icon.class}>
-                    {icon.url && <img src={icon.url} />}
-                    <div className="company-name" style={dynamicStyle}><WordWrapper text={companyName} /></div>
+                    {icon.url && <div id="iconWrapper" className="icon-wrapper" style={dynamicIconStyle}><img id="maskImage" src={icon.url} /></div>}
+                    <div className="company-name" style={dynamicFontStyle}><WordWrapper text={companyName} /></div>
                     {icon.slogan && <div className="slogan">{slogan}</div>}
               </div>
               </div>

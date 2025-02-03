@@ -2,6 +2,22 @@
     display: flex;
     align-items: center;
 }
+.logo-block img {
+    visibility: hidden;
+}
+.logo-block .icon-wrapper {
+    mask-repeat: no-repeat;
+    background-color: #000;
+}
+.logo-block .company-name,
+.logo-block .slogan {
+    background-color: #000;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
 .logo-block .style-1 {
     font-family: "Georama", serif;
     text-transform: uppercase;
@@ -13,8 +29,9 @@
     align-items: center;
     line-height: 1.1;
 }
-.logo-block .style-1 img {
+.logo-block .style-1 .icon-wrapper {
     margin-right: 15px;
+    background-color: #E20000;
 }
 .logo-block .style-1 span {
     display: block;
@@ -23,9 +40,13 @@
 .logo-block .style-2 {
     font-size: 30px;
 }
+.logo-block .style-2 .icon-wrapper {
+    background-image: linear-gradient(#AEACB9, #17191C);
+}
 .logo-block .style-2 .company-name {
     margin-left: -12px;
     margin-top: 13px;
+    background-color: #17191C;
 }
 
 .logo-block .style-3 {
@@ -35,8 +56,12 @@
     flex-direction: column;
     font-size: 30px;
 }
-.logo-block .style-3 img {
+.logo-block .style-3 .icon-wrapper {
     margin-bottom: 5px;
+    background-image: linear-gradient(#021A48, #0555EE);
+}
+.logo-block .style-3 .company-name {
+    background-color: #17191C;
 }
 
 .logo-block .style-4 {
@@ -45,8 +70,9 @@
     font-size: 25px;
     letter-spacing: 1px;
 }
-.logo-block .style-4 img {
+.logo-block .style-4 .icon-wrapper {
     margin-bottom: 5px;
+    background: #B08B00;
 }
 
 .logo-block .style-5 {
@@ -55,8 +81,12 @@
     text-transform: uppercase;
     font-size: 20px;
 }
-.logo-block .style-5 img {
+.logo-block .style-5 .icon-wrapper {
     margin-right: 12px;
+    background-color: #00256C;
+}
+.logo-block .style-5 .company-name {
+    background-color: #00256C;
 }
 
 .logo-block .style-6 {
@@ -67,8 +97,12 @@
     text-align: left;
     line-height: 1.2;
 }
-.logo-block .style-6 img {
+.logo-block .style-6 .icon-wrapper {
     margin-right: 10px;
+    background-image: linear-gradient(#D7AA02, #503F00);
+}
+.logo-block .style-6 .company-name {
+    background-color: #535160;
 }
 .logo-block .style-6 span {
     display: block;
@@ -80,8 +114,11 @@
     font-weight: 700;
     font-size: 28px;
 }
+.logo-block .style-7 .icon-wrapper {
+    background-image: linear-gradient(#780000, #EA0000);
+}
 .logo-block .style-7 .company-name {
-    margin-bottom: 23px;
+    margin-bottom: 30px;
     margin-left: -80px;
 }
 
@@ -90,8 +127,12 @@
     letter-spacing: 1px;
     font-size: 25px;
 }
+.logo-block .style-8 .icon-wrapper {
+    background-image: linear-gradient(#AEACB9, #17191C);
+}
 .logo-block .style-8 .company-name {
     margin-left: -30px;
+    background-color: #135934;
 }
 
 .logo-block .style-9 {
@@ -101,9 +142,14 @@
     letter-spacing: 3px;
     font-weight: 500;
     font-style: italic;
+    color: #17191C;
 }
-.logo-block .style-9 img {
+.logo-block .style-9 .icon-wrapper {
     margin-bottom: 8px;
+    background: #E20000;
+}
+.logo-block .style-9 .company-name {
+    background-image: linear-gradient(#AEACB9, #17191C);
 }
 
 
@@ -121,7 +167,9 @@
     padding-right: 10px;
     padding-bottom: 8px;
     margin-bottom: 10px;
+    background-image: linear-gradient(#AEACB9, #17191C);
 }
 .logo-block .style-10 .slogan {
     font-size: 14px;
+    background-image: linear-gradient(#AEACB9, #17191C);
 }

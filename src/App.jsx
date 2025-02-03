@@ -9,7 +9,6 @@ import FontInjector from "./components/FontInjector.jsx";
 
 import LogoBlock from "./components/LogoBlock.jsx";
 import FontDropdown from "./components/FontDropdown.jsx";
-import ColourPicker from "./components/ColourPicker.jsx";
 import { fontOptions } from './fontOptions.jsx';
 import { iconOptions } from './iconOptions.jsx';
 
@@ -53,9 +52,14 @@ function App() {
   //   setLogoIcon(newIcon);
   // };
 
-  const [fontColour, setFontColour] = useState("#000000"); 
+  const [fontColour, setFontColour] = useState(); 
   const updateFontColour = (newColour) => {
     setFontColour(newColour);
+  };
+
+  const [accentColour, setAccentColour] = useState(); 
+  const updateAccentColour = (newColour) => {
+    setAccentColour(newColour);
   };
 
 
@@ -100,6 +104,8 @@ function App() {
                                         selectedFont={selectedFont}
                                         fontColour={fontColour}
                                         updateFontColour={updateFontColour}
+                                        accentColour={accentColour}
+                                        updateAccentColour={updateAccentColour}
                                       />}
 
       {/* <div>

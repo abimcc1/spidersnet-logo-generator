@@ -10,11 +10,14 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
     return <div>{wrappedWords}</div>;
   }
 
-
   const handleLogoClick = (id) => {
     setSelectedLogo(id);
     navigateTo('screen4');
   };
+
+  const IconStyle = {
+    maskImage: `url(${icon.url})`,
+  }
 
     return (
       <> 
@@ -24,7 +27,7 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
             <div className="logo-block" key={icon.id} onClick={() => handleLogoClick(icon.id)}>
               <div className="logo-block-inner">
                 <div className={icon.class}>
-                    {icon.url && <img src={icon.url} />}
+                    {icon.url && <div id="iconWrapper" className="icon-wrapper" style={IconStyle}><img id="maskImage" src={icon.url} /></div>}
                     <div className="company-name"><WordWrapper text={companyName} /></div>
                     {icon.slogan && <div className="slogan">{slogan}</div>}
               </div>

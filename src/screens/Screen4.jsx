@@ -6,10 +6,12 @@ import { iconOptions } from '../iconOptions.jsx';
 import CompanyNameInput from "../components/CompanyNameInput.jsx";
 import FontDropdown from "../components/FontDropdown.jsx";
 import { fontOptions } from '../fontOptions.jsx';
-import ColourPicker from "../components/ColourPicker.jsx";
+import FontColorDropdown from "../components/FontColorDropdown.jsx";
+import AccentColorDropdown from "../components/AccentColorDropdown.jsx";
 
 
-function Screen4({ navigateTo, currentScreen, companyName, updateCompanyName, slogan, updateSlogan, selectedLogo, logoFont, updateLogoFont, selectedFont, fontColour, updateFontColour }) {
+
+function Screen4({ navigateTo, currentScreen, companyName, updateCompanyName, slogan, updateSlogan, selectedLogo, logoFont, updateLogoFont, selectedFont, fontColour, updateFontColour, accentColour, updateAccentColour }) {
     
     const icon = iconOptions.find(item => item.id === selectedLogo);
 
@@ -48,13 +50,23 @@ function Screen4({ navigateTo, currentScreen, companyName, updateCompanyName, sl
                     />
                 </div>
 
+
                 <div className="settings-field">
                     <label>Font Colour</label>
-                    <ColourPicker 
-                    fontColour={fontColour} 
-                    updateFontColour={updateFontColour}
+                    <FontColorDropdown
+                        fontColour={fontColour} 
+                        updateFontColour={updateFontColour}
                     />
                 </div>
+
+                <div className="settings-field">
+                    <label>Accent Colour</label>
+                    <AccentColorDropdown
+                        accentColour={accentColour} 
+                        updateAccentColour={updateAccentColour}
+                    />
+                </div>
+
              </div>
 
               <div className="l-canvas">
@@ -66,6 +78,7 @@ function Screen4({ navigateTo, currentScreen, companyName, updateCompanyName, sl
                   navigateTo={navigateTo}
                   fontFamily={selectedFont?.fontfamily}
                   fontColour={fontColour}
+                  accentColour={accentColour}
                 />
                 
             </div>
