@@ -1,7 +1,7 @@
 // index.js (Cloudflare Worker)
 
-const CLICKUP_API_KEY = 'BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7';  // Your ClickUp API Key
-const LIST_ID = '901508351342';  // The list ID in ClickUp
+const CLICKUP_API_KEY = env.CLICKUP_API; 
+const LIST_ID = env.CLICKUP_LIST;
 
 async function createClickUpTask(formData) {
   const url = `https://api.clickup.com/api/v2/list/${LIST_ID}/task`;
