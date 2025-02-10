@@ -1,59 +1,41 @@
-// index.js (Cloudflare Worker)
+// functions/create-ticket.js
 
-const CLICKUP_API_KEY = env.CLICKUP_API; 
-const LIST_ID = env.CLICKUP_LIST;
-
-async function createClickUpTask(formData) {
-  const url = `https://api.clickup.com/api/v2/list/${LIST_ID}/task`;
+export default {
+    async fetch(req, env) {
+      // Now the 'env' object is passed into the 'fetch' handler
   
-  const taskData = {
-    name: formData.name, // e.g., task title
-    description: formData.description, // e.g., task details
-    priority: formData.priority, // e.g., task priority (optional)
-    due_date: formData.dueDate, // e.g., task due date (optional)
-  };
-
-  const headers = {
-    'Authorization': CLICKUP_API_KEY,
-    'Content-Type': 'application/json'
-  };
-
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: headers,
-    body: JSON.stringify(taskData)
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to create ClickUp task');
-  }
-
-  return await response.json(); // Return the response from ClickUp
-}
-
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-});
-
-async function handleRequest(request) {
-  if (request.method === 'POST') {
-    try {
-      const formData = await request.json();
-
-      // Create a task in ClickUp
-      const task = await createClickUpTask(formData);
-
+      const apiKey = env.CLICKUP_API;  // Access environment variables via the 'env' object
+      const listId = env.CLICKUP_LIST;
+  
+      // Your ClickUp API logic here
+      const formData = await req.json();
+  
+      const taskData = {
+        name: formData.name,
+        description: formData.description,
+        priority: formData.priority,
+        due_date: formData.dueDate,
+      };
+  
+      const url = `https://api.clickup.com/api/v2/list/${listId}/task`;
+  
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Authorization': apiKey,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(taskData),
+      });
+  
+      if (!response.ok) {
+        return new Response('Error creating ClickUp task', { status: 500 });
+      }
+  
+      const task = await response.json();
       return new Response(JSON.stringify({ success: true, task }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' },
       });
-    } catch (error) {
-      return new Response(JSON.stringify({ success: false, error: error.message }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }
-      });
-    }
-  } else {
-    return new Response('Invalid Request Method', { status: 405 });
-  }
-}
+    },
+  };

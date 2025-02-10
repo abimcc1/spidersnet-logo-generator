@@ -4,18 +4,24 @@ type = "javascript"          # Type of the project (JavaScript, TypeScript, etc.
 # Specify the entry point
 main = "functions/create-ticket.js"  # Path to your main function file
 
-# Account ID of your Cloudflare account
-account_id = "fdc96013ff1bf45f7d2e7175767461bb"
+  compatibility_date = "2024-10-15"  # Same as above
 
-compatibility_flags = [ "nodejs_compat" ]
-
-# The compatibility date is required for worker projects
-compatibility_date = "2024-10-15"  # Update to today's date
 
 [env.production]
-workers_dev = true
-compatibility_date = "2024-10-15"  # Same as above
+  account_id = "fdc96013ff1bf45f7d2e7175767461bb"
+  workers_dev = false  # False if deploying to a custom domain
+  compatibility_date = "2024-10-15"  # Same as above
+
+[build]
+  functions = "./functions"  # Path to your functions directory
 
 [vars]
 CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"
 CLICKUP_LIST = "901508351342"
+
+
+
+[[deployments]]
+  environment = "production"
+  url = "https://spidersnet-logo-generator.workers.dev"  # URL of the deployed worker
+
