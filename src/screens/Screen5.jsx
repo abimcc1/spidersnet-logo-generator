@@ -3,6 +3,7 @@ import Header from "../components/Header.jsx";
 import StepIndicator from "../components/StepIndicator.jsx";
 import LogoCanvas from "../components/LogoCanvas.jsx";
 import { iconOptions } from '../iconOptions.jsx';
+import TestLogoCanvas from "../components/TestLogoCanvas.jsx";
 
 
 function Screen5({ navigateTo, currentScreen, completedSteps, companyName, slogan, selectedLogo, logoFont, selectedFont, fontColour, accentColour, logoFontSize, logoFontSpacing }) {
@@ -11,6 +12,7 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
 
     return (
       <> 
+      <div className="l-flex">
         <Header />
         <div className="l-screen screen5">
             <div className="l-wrap">
@@ -29,6 +31,8 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
               </div>
 
               <div className="l-canvas">
+
+
                 <LogoCanvas 
                   companyName={companyName} 
                   slogan={slogan} 
@@ -47,6 +51,7 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
 
                 
             </div>
+        </div>
         </div>
       </>
     )
