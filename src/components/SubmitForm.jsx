@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 const Form = () => {
+
+    console.log('function');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState('');
@@ -17,7 +19,7 @@ const Form = () => {
     };
 
     try {
-      const response = await fetch('https://your-worker-url.workers.dev', {
+      const response = await fetch('https://spidersnet-logo-generator.workers.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
