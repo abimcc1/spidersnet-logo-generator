@@ -1,27 +1,27 @@
-name = "spidersnet-logo-generator"  # Name of your Cloudflare project
-type = "javascript"          # Type of the project (JavaScript, TypeScript, etc.)
+name = "spidersnet-logo-generator"
+type = "javascript"
 
-# Specify the entry point
-main = "functions/create-ticket.js"  # Path to your main function file
+# Specify the entry point for the worker function (your main handler file)
+main = "functions/create-ticket.js"  # Path to the main function file
+  compatibility_date = "2024-10-15"
+# For Pages deployment
+[build]
+  command = "npm run build"  # If you need to run a build command
+  directory = "build"        # Directory where your build output is placed
 
-  compatibility_date = "2024-10-15"  # Same as above
+[build.functions]
+  directory = "./functions"  # Path to your functions directory
 
-
+# Cloudflare Pages specific configurations
 [env.production]
   account_id = "fdc96013ff1bf45f7d2e7175767461bb"
   workers_dev = false  # False if deploying to a custom domain
-  compatibility_date = "2024-10-15"  # Same as above
-
-[build]
-  functions = "./functions"  # Path to your functions directory
+  compatibility_date = "2024-10-15"
 
 [vars]
-CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"
-CLICKUP_LIST = "901508351342"
-
-
+  CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"  # Your ClickUp API key
+  CLICKUP_LIST = "901508351342"  # Your ClickUp List ID
 
 [[deployments]]
   environment = "production"
-  url = "https://spidersnet-logo-generator.workers.dev"  # URL of the deployed worker
-
+  url = "https://spidersnet-logo-generator.workers.dev"
