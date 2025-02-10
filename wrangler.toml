@@ -1,6 +1,7 @@
 name = "react-cloudflare-pages-example"  # Project name
 type = "javascript"                      # Project type (use "javascript" or "typescript")
-
+# Static files build output directory (for React build)
+pages_build_output_dir = "dist"  # Directory where static files are located after build
 # Pages build configuration
 [build]
   # Command to run before deployment (e.g., build your React app)
@@ -12,8 +13,7 @@ type = "javascript"                      # Project type (use "javascript" or "ty
 [build.functions]
   directory = "./functions"    # Path to your functions directory, where the worker script is
 
-# Static files build output directory (for React build)
-pages_build_output_dir = "dist"  # Directory where static files are located after build
+
 
 # Environment-specific settings for deployment
 [env.production]

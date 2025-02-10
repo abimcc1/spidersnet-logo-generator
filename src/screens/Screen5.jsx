@@ -7,7 +7,7 @@ import TestLogoCanvas from "../components/TestLogoCanvas.jsx";
 // import html2canvas from "html2canvas";
 // import domtoimage from 'dom-to-image';
 
-import SubmitForm from "../components/SubmitForm.jsx";
+// import SubmitForm from "../components/SubmitForm.jsx";
 
 function Screen5({ navigateTo, currentScreen, completedSteps, companyName, slogan, selectedLogo, logoFont, selectedFont, fontColour, accentColour, logoFontSize, logoFontSpacing }) {
   const icon = iconOptions.find(item => item.id === selectedLogo);
