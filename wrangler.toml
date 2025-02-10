@@ -15,7 +15,7 @@ main = "functions/create-ticket.js"  # Path to the main function file
 # Cloudflare Pages specific configurations
 [env.production]
   account_id = "fdc96013ff1bf45f7d2e7175767461bb"
-  workers_dev = false  # False if deploying to a custom domain
+  workers_dev = true  # False if deploying to a custom domain
   compatibility_date = "2024-10-15"
 
 [vars]
