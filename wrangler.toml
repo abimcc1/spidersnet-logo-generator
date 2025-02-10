@@ -1,27 +1,29 @@
-name = "spidersnet-logo-generator"
-type = "javascript"
+name = "spidersnet-logo-generator"  # The name of your Cloudflare project
+type = "javascript"                # The type of project (JavaScript)
+# Specify the output directory for the static assets
+pages_build_output_dir = "./dist"    # The directory where static files are located after building
 
-# Specify the entry point for the worker function (your main handler file)
-main = "functions/create-ticket.js"  # Path to the main function file
-  compatibility_date = "2024-10-15"
-# For Pages deployment
+# Configuration for building and deploying on Cloudflare Pages
 [build]
-  command = "npm run build"  # If you need to run a build command
-  directory = "build"        # Directory where your build output is placed
+  command = "npm run build"         # Command to run before deploying (optional)
+  directory = "./dist"               # Directory where your static site build output is placed
 
+# Specify where your functions are located
 [build.functions]
-  directory = "./functions"  # Path to your functions directory
+  directory = "./functions"         # Path to your functions directory, where your worker scripts are
 
-# Cloudflare Pages specific configurations
+
+# Environment-specific settings for deployment
 [env.production]
-  account_id = "fdc96013ff1bf45f7d2e7175767461bb"
-  workers_dev = true  # False if deploying to a custom domain
-  compatibility_date = "2024-10-15"
+  account_id = "fdc96013ff1bf45f7d2e7175767461bb"    # Your Cloudflare account ID
+  workers_dev = false               # Set to false if deploying to a custom domain
+  compatibility_date = "2024-10-15" # Compatibility date (use the latest available)
 
+# Define any environment variables that your functions need
 [vars]
-  CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"  # Your ClickUp API key
-  CLICKUP_LIST = "901508351342"  # Your ClickUp List ID
+  CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"
+  CLICKUP_LIST = "901508351342"
 
 [[deployments]]
-  environment = "production"
-  url = "https://spidersnet-logo-generator.workers.dev"
+  environment = "production"        # The environment (could also be "staging" or others)
+  url = "https://spidersnet-logo-generator.pages.dev"  # The deployment URL for your Pages function
