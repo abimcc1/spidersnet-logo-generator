@@ -8,10 +8,8 @@ import Screen5 from "./screens/Screen5.jsx";
 
 import FontInjector from "./components/FontInjector.jsx";
 
-import LogoBlock from "./components/LogoBlock.jsx";
-import FontDropdown from "./components/FontDropdown.jsx";
 import { fontOptions } from './fontOptions.jsx';
-import { iconOptions } from './iconOptions.jsx';
+
 
 function App() {
 

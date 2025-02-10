@@ -1,45 +1,49 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from "react";
+import html2canvas from "html2canvas";
 
-const TestLogoCanvas = () => {
-  const canvasRef = useRef(null);
+const LogoGenerator = () => {
+  const captureRef = useRef(null);
 
-  // Draw on canvas when component mounts
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
+  const handleDownload = () => {
+    if (captureRef.current) {
+      // Use html2canvas to capture the content inside the div
+      html2canvas(captureRef.current).then((canvas) => {
+        // Convert the canvas to a data URL (PNG format)
+        const dataUrl = canvas.toDataURL("image/png");
 
-    // Example: Draw a simple logo (a circle with text)
-    context.fillStyle = '#FF5733'; // Set color for the circle
-    context.beginPath();
-    context.arc(150, 150, 100, 0, Math.PI * 2); // Draw circle
-    context.fill(); // Fill the circle
-
-    context.fillStyle = '#FFFFFF'; // Set color for the text
-    context.font = '30px Arial'; // Set font style
-    context.fillText('Logo', 120, 170); // Add text on top of circle
-  }, []);
-
-  // Function to trigger download of canvas content
-  const downloadLogo = () => {
-    const canvas = canvasRef.current;
-    const dataUrl = canvas.toDataURL('image/png'); // Export as PNG
-    const link = document.createElement('a');
-    link.href = dataUrl;
-    link.download = 'logo.png'; // File name
-    link.click();
+        // Create a temporary link to download the image
+        const link = document.createElement("a");
+        link.href = dataUrl;
+        link.download = "logo.png"; // Name the downloaded file
+        link.click(); // Simulate the click to start the download
+      });
+    }
   };
 
   return (
     <div>
-      <canvas
-        ref={canvasRef}
-        width="300"
-        height="300"
-        style={{ border: '1px solid black' }}
-      ></canvas>
-      <button onClick={downloadLogo}>Download Logo</button>
+      <div
+        id="canvasCapture"
+        ref={captureRef}
+        style={{
+          width: "400px",
+          height: "300px",
+          border: "1px solid #ccc",
+        }}
+      >
+        <div>
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Logo Image"
+            style={{ width: "200px", marginBottom: "20px" }}
+          />
+          <h1>Your Brand</h1>
+        </div>
+      </div>
+
+      <button onClick={handleDownload}>Download Logo</button>
     </div>
   );
 };
 
-export default TestLogoCanvas;
+export default LogoGenerator;
