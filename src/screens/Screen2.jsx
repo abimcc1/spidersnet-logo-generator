@@ -4,7 +4,7 @@ import CompanyNameInput from "../components/CompanyNameInput.jsx";
 import SloganInput from "../components/SloganInput.jsx";
 import StepIndicator from "../components/StepIndicator.jsx";
 
-function Screen2({ navigateTo, currentScreen, companyName, updateCompanyName, slogan, updateSlogan }) {
+function Screen2({ navigateTo, currentScreen, completedSteps, companyName, updateCompanyName, slogan, updateSlogan }) {
 
 
     return (
@@ -17,6 +17,7 @@ function Screen2({ navigateTo, currentScreen, companyName, updateCompanyName, sl
                 <StepIndicator 
                   navigateTo={navigateTo}
                   currentScreen={currentScreen}
+                  completedSteps={completedSteps} 
                 />
 
                 <h2>Enter your business name</h2>

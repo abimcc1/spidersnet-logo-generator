@@ -83,7 +83,7 @@ body {
 }
 
 .l-screen {
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .l-screen.screen1 {
@@ -157,13 +157,16 @@ body {
 
 .l-screen.screen2,
 .l-screen.screen3,
-.l-screen.screen4 {
+.l-screen.screen4,
+.l-screen.screen5 {
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .l-screen.screen2 h2,
 .l-screen.screen3 h2,
-.l-screen.screen4 h2 {
+.l-screen.screen4 h2, 
+.l-screen.screen5 h2 {
   font-size: 42px;
   margin-bottom: 15px;
 }
@@ -232,11 +235,14 @@ body {
 }
 .step-indicator > div:last-child .step:after { display: none; }
 .step-indicator .active .step,
-.step-indicator .active .step:after {
+.step-indicator .completed .step,
+.step-indicator .active .step:after,
+.step-indicator .completed .step:after {
   background: linear-gradient(180deg, #662FEB 0%, #E2078F 100%);
 }
 
-.back-button {
+.back-button,
+.next-button {
   border-radius: 8px;
   border: 1px solid #C8CAD6;
   background: #FFF;
@@ -249,7 +255,18 @@ body {
   top: 0;
   left: 15px;
 }
-
+.next-button {
+  right: 15px;
+  left: auto;
+  background: #662FEB;
+  border: 0;
+}
+.next-button.text {
+  color: #fff;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 .category-tabs {
   margin-bottom: 40px;
@@ -296,7 +313,10 @@ body {
   text-align: center;
   aspect-ratio: 4/3;
 }
-
+.l-settings__wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .l-settings {
   width: 30%;
   float: left;
@@ -326,6 +346,16 @@ body {
 
 .settings-field {
   margin-bottom: 20px;
+}
+.settings-field.half {
+  width: calc(49% - 1%);
+
+}
+.settings-field.half.left {
+  float: left;
+}
+.settings-field.half.right {
+  float: right;
 }
 .settings-field label {
   margin-bottom: 5px;
@@ -431,3 +461,7 @@ body {
   border: 2px solid #662FEB;
 }
 
+
+.l-screen.screen5 .l-canvas {
+  width: 100%;
+}

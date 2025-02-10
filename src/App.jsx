@@ -4,6 +4,7 @@ import Screen1 from "./screens/Screen1.jsx";
 import Screen2 from "./screens/Screen2.jsx";
 import Screen3 from "./screens/Screen3.jsx";
 import Screen4 from "./screens/Screen4.jsx";
+import Screen5 from "./screens/Screen5.jsx";
 
 import FontInjector from "./components/FontInjector.jsx";
 
@@ -16,14 +17,18 @@ function App() {
 
   const initialScreen = localStorage.getItem('currentScreen') || 'screen1';
   const [currentScreen, setCurrentScreen] = useState('screen1');
+  const [completedSteps, setCompletedSteps] = useState([]);
   // Update localStorage whenever currentScreen changes
   useEffect(() => {
     localStorage.setItem('currentScreen', currentScreen);
   }, [currentScreen]);
-  // const [currentScreen, setCurrentScreen] = useState("screen1");
-  // Function to change screen
+
   const navigateTo = (screen) => {
     setCurrentScreen(screen);
+    // When the user navigates to a step, mark it as completed
+    if (!completedSteps.includes(screen)) {
+      setCompletedSteps(prevSteps => [...prevSteps, screen]);
+    }
   };
 
 
@@ -52,14 +57,24 @@ function App() {
   //   setLogoIcon(newIcon);
   // };
 
-  const [fontColour, setFontColour] = useState(); 
+  const [fontColour, setFontColour] = useState("default"); 
   const updateFontColour = (newColour) => {
     setFontColour(newColour);
   };
 
-  const [accentColour, setAccentColour] = useState(); 
+  const [accentColour, setAccentColour] = useState("default"); 
   const updateAccentColour = (newColour) => {
     setAccentColour(newColour);
+  };
+
+  const [logoFontSize, setLogoFontSize] = useState();
+  const updateLogoFontSize = (newSize) => {
+    setLogoFontSize(newSize);
+  };
+
+  const [logoFontSpacing, setLogoFontSpacing] = useState();
+  const updateLogoFontSpacing = (newSpacing) => {
+    setLogoFontSpacing(newSpacing);
   };
 
 
@@ -72,10 +87,13 @@ function App() {
 
       {currentScreen === 'screen1' && <Screen1 
                                         navigateTo={navigateTo} 
+                                        currentScreen={currentScreen}
+                                        completedSteps={completedSteps}
                                       />}
       {currentScreen === 'screen2' && <Screen2 
                                       navigateTo={navigateTo} 
                                       currentScreen={currentScreen}
+                                      completedSteps={completedSteps}
                                       companyName={companyName} 
                                       updateCompanyName={updateCompanyName} 
                                       slogan={slogan} 
@@ -84,6 +102,7 @@ function App() {
       {currentScreen === 'screen3' && <Screen3 
                                         navigateTo={navigateTo} 
                                         currentScreen={currentScreen}
+                                        completedSteps={completedSteps}
                                         companyName={companyName} 
                                         updateCompanyName={updateCompanyName}
                                         slogan={slogan} 
@@ -94,6 +113,7 @@ function App() {
       {currentScreen === 'screen4' && <Screen4 
                                         navigateTo={navigateTo} 
                                         currentScreen={currentScreen}
+                                        completedSteps={completedSteps}
                                         companyName={companyName} 
                                         updateCompanyName={updateCompanyName}
                                         slogan={slogan} 
@@ -106,6 +126,25 @@ function App() {
                                         updateFontColour={updateFontColour}
                                         accentColour={accentColour}
                                         updateAccentColour={updateAccentColour}
+                                        logoFontSize={logoFontSize}
+                                        updateLogoFontSize={updateLogoFontSize}
+                                        logoFontSpacing={logoFontSpacing}
+                                        updateLogoFontSpacing={updateLogoFontSpacing}
+                                      />}
+
+      {currentScreen === 'screen5' && <Screen5 
+                                        navigateTo={navigateTo} 
+                                        currentScreen={currentScreen}
+                                        completedSteps={completedSteps}
+                                        companyName={companyName} 
+                                        slogan={slogan} 
+                                        selectedLogo={selectedLogo}
+                                        logoFont={logoFont}
+                                        selectedFont={selectedFont}
+                                        fontColour={fontColour}
+                                        accentColour={accentColour}
+                                        logoFontSize={logoFontSize}
+                                        logoFontSpacing={logoFontSpacing}
                                       />}
 
       {/* <div>

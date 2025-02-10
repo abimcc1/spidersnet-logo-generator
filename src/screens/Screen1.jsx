@@ -1,4 +1,4 @@
-function Screen1({ navigateTo }) {
+function Screen1({ navigateTo, currentScreen, completedSteps }) {
     return (
       <> 
         <div className="l-screen screen1">

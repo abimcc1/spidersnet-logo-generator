@@ -5,7 +5,7 @@ import LogoBlock from "../components/LogoBlock.jsx";
 import { iconOptions } from '../iconOptions.jsx';
 
 
-function Screen3({ navigateTo, currentScreen, companyName, updateCompanyName, slogan, updateSlogan, setSelectedLogo }) {
+function Screen3({ navigateTo, currentScreen, completedSteps, companyName, updateCompanyName, slogan, updateSlogan, setSelectedLogo }) {
 
   // Use useEffect to update companyName only once
   useEffect(() => {
@@ -44,6 +44,7 @@ function Screen3({ navigateTo, currentScreen, companyName, updateCompanyName, sl
                   <StepIndicator 
                     navigateTo={navigateTo}
                     currentScreen={currentScreen}
+                    completedSteps={completedSteps} 
                   />
 
                   <h2>Pick the logo you like</h2>

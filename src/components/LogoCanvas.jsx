@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { colorOptions } from '../colorOptions.jsx';
 
-function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fontFamily, fontColour, accentColour }) {
+function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentColour, logoFontSize, logoFontSpacing }) {
 
   function WordWrapper({ text }) {
     // Split the text into words and wrap each word in a span
@@ -33,7 +33,6 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
     setFontStyle(style); 
   }, [fontColour]);
 
-  console.log(accentColour);
 
     const dynamicIconStyle = {
       ...(
@@ -46,7 +45,17 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
       maskRepeat: "no-repeat",
     }
 
-    console.log(fontColour);
+    const dynamicSloganStyle  = {
+      ...(
+        accentColour !== "default" && {
+          backgroundColor: accentStyle === "solid" ? accentColour : "transparent", 
+          backgroundImage: accentStyle === "solid" ? "none" : accentColour, 
+        }
+      ),
+      backgroundSize: '100%', 
+      backgroundClip: 'text',
+    }
+
 
     const dynamicFontStyle = {
       ...(
@@ -58,6 +67,8 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
       fontFamily: fontFamily,
       backgroundSize: '100%', 
       backgroundClip: 'text',
+      fontSize: `${logoFontSize}px`,
+      letterSpacing: `${logoFontSpacing}px`,
     }
 
 
@@ -71,7 +82,7 @@ function LogoCanvas({ companyName, slogan, icon, setSelectedLogo, navigateTo, fo
                 <div className={icon.class}>
                     {icon.url && <div id="iconWrapper" className="icon-wrapper" style={dynamicIconStyle}><img id="maskImage" src={icon.url} /></div>}
                     <div className="company-name" style={dynamicFontStyle}><WordWrapper text={companyName} /></div>
-                    {icon.slogan && <div className="slogan">{slogan}</div>}
+                    {icon.slogan && <div className="slogan" style={dynamicSloganStyle}>{slogan}</div>}
               </div>
               </div>
             </div>

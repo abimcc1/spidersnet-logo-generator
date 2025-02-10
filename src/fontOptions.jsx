@@ -78,9 +78,37 @@ export const fontOptions = [
 },
 {
     id: 12,
-    name: "Montserrat",
-    import: `@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');`,
-    fontfamily: "Montserrat",
+    name: "Poppins",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');`,
+    fontfamily: "Poppins",
+    stroke: "serif"
+},
+{
+    id: 13,
+    name: "Aoboshi One",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');`,
+    fontfamily: "Aoboshi One",
+    stroke: "serif"
+},
+{
+    id: 14,
+    name: "REM",
+    import: `@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');`,
+    fontfamily: "REM",
+    stroke: "serif"
+},
+{
+    id: 15,
+    name: "Fredoka",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');`,
+    fontfamily: "Fredoka",
+    stroke: "serif"
+},
+{
+    id: 16,
+    name: "Crimson Pro",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');`,
+    fontfamily: "Crimson Pro",
     stroke: "serif"
 },
 ]

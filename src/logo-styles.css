@@ -173,3 +173,174 @@
     font-size: 14px;
     background-image: linear-gradient(#AEACB9, #17191C);
 }
+
+.logo-block .style-11  {
+    flex-direction: column;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+.logo-block .style-11 .company-name {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 8px;
+    background-image: linear-gradient(#D7AA02, #503F00);
+}
+
+.logo-block .style-12  {
+    flex-direction: column;
+    letter-spacing: 1px;
+    font-family: "Barlow";
+}
+.logo-block .style-12 .company-name {
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(#AEACB9, #17191C);
+}
+.logo-block .style-12 .slogan {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: #E20000;
+    text-transform: uppercase;
+}
+
+.logo-block .style-13  {
+    flex-direction: column;
+    letter-spacing: 1px;
+    align-items: flex-start;
+    font-family: "Montserrat";
+}
+.logo-block .style-13  .icon-wrapper {
+    height: 12px;
+    background-color: #E20000;
+}
+.logo-block .style-13 .company-name {
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-color: #17191C;
+}
+.logo-block .style-13 .slogan {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    background-color: #17191C;
+    text-transform: uppercase;
+}
+
+.logo-block .style-14  {
+    flex-direction: column;
+}
+.logo-block .style-14 .company-name {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: -5px;
+    background-color: #0400C5;
+}
+.logo-block .style-14 .slogan {
+    font-size: 32px;
+    font-weight: 400;
+    background-color: #17191C;
+}
+
+.logo-block .style-15  {
+    flex-direction: column;
+    font-family: "Aoboshi One";
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.logo-block .style-15 .company-name {
+    font-size: 23px;
+    letter-spacing: 2.8px;
+    background-color: #135934;
+    margin-bottom: 5px
+}
+.logo-block .style-15 .slogan {
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: #535160;
+}
+
+.logo-block .style-16  {
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "REM", serif;
+    text-align: left;
+}
+.logo-block .style-16 .company-name {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 3.5px;
+    background-color: #17191C;
+    margin-bottom: 5px;
+    font-style: italic;
+    line-height: 1;
+}
+.logo-block .style-16 span {
+    display: block;
+}
+.logo-block .style-16 .slogan {
+    font-size: 10px;
+    letter-spacing: 1px;
+    background-color: #E20000;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.logo-block .style-17  {
+    flex-direction: column;
+    font-family: "Fredoka", serif;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.logo-block .style-17 .company-name {
+    background-color: #535160;
+    margin-bottom: 5px;
+    line-height: 1;
+    border: 1.5px solid #FF6A00;
+    border-radius: 6px;
+    padding: 5px;
+}
+.logo-block .style-17 .company-name span:first-child {
+   background-color: #FF6A00;
+   background-size: 100%;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent; 
+   -moz-text-fill-color: transparent;
+}
+.logo-block .style-17 .slogan {
+    background-color: #535160;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.logo-block .style-18  {
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #AEACB9;
+    padding: 10px;
+    font-family: "Crimson Pro", serif;
+    font-weight: 600;
+    letter-spacing: 4px;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+.logo-block .style-18 .company-name {
+    background-color: #535160;
+    margin-bottom: 5px;
+}
+.logo-block .style-18 .slogan {
+    background-color: #888793;
+    font-size: 15px;
+}

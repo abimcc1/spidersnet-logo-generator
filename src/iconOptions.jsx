@@ -68,4 +68,53 @@ export const iconOptions = [
         class: "style-10",
         slogan: true
     },
+    {
+        id: 11,
+        category: "typography",
+        class: "style-11",
+        slogan: false
+    },
+    {
+        id: 12,
+        category: "typography",
+        class: "style-12",
+        slogan: true
+    },
+    {
+        id: 13,
+        url: "icons/icon_13.svg",
+        category: "typography",
+        class: "style-13",
+        slogan: true
+    },
+    {
+        id: 14,
+        category: "typography",
+        class: "style-14",
+        slogan: true
+    },
+    {
+        id: 15,
+        category: "typography",
+        class: "style-15",
+        slogan: true
+    },
+    {
+        id: 16,
+        category: "typography",
+        class: "style-16",
+        slogan: true
+    },
+    {
+        id: 17,
+        category: "typography",
+        class: "style-17",
+        slogan: true
+    },
+    {
+        id: 18,
+        category: "typography",
+        class: "style-18",
+        slogan: true
+    },
 ]
