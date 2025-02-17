@@ -3,7 +3,7 @@ function Screen1({ navigateTo, currentScreen, completedSteps }) {
       <> 
         <div className="l-screen screen1">
             <div className="l-wrap">
-                <img src="sn-icon.svg"></img>
+                <img src="sn-icon.svg" className="spidersnet-icon"></img>
                 <div className="welcome">Welcome to</div>
                 <div className="logo-wrap">
                     <img src="sn-logo.svg"></img>

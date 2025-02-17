@@ -3,11 +3,6 @@ type = "javascript"                      # Project type (use "javascript" or "ty
 # Static files build output directory (for React build)
 pages_build_output_dir = "dist"  # Directory where static files are located after build
 
-# Specify the path to your worker functions directory
-[build.functions]
-  directory = "./functions"    # Path to your functions directory, where the worker script is
-
-
 
 # Environment-specific settings for deployment
 [env.production]
@@ -18,6 +13,3 @@ pages_build_output_dir = "dist"  # Directory where static files are located afte
   CLICKUP_API = "BVIBNXPCE5WHT7SCJASY00O2ZH30YGT7"
   CLICKUP_LIST = "901508351342"
 
-[[deployments]]
-  environment = "production"
-  url = "https://spidersnet-logo-generator.pages.dev"  # Deployment URL for the Pages function

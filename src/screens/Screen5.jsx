@@ -3,33 +3,31 @@ import Header from "../components/Header.jsx";
 import StepIndicator from "../components/StepIndicator.jsx";
 import LogoCanvas from "../components/LogoCanvas.jsx";
 import { iconOptions } from '../iconOptions.jsx';
-import TestLogoCanvas from "../components/TestLogoCanvas.jsx";
+// import TestLogoCanvas from "../components/TestLogoCanvas.jsx";
 // import html2canvas from "html2canvas";
-// import domtoimage from 'dom-to-image';
+import domtoimage from 'dom-to-image';
 
 // import SubmitForm from "../components/SubmitForm.jsx";
 
 function Screen5({ navigateTo, currentScreen, completedSteps, companyName, slogan, selectedLogo, logoFont, selectedFont, fontColour, accentColour, logoFontSize, logoFontSpacing }) {
   const icon = iconOptions.find(item => item.id === selectedLogo);
 
-  // const captureRef = useRef(null);
+  const divRef = useRef(null);
 
-  // const handleDownload = () => {
-  //   if (captureRef.current) {
-  //     // Capture the content inside the div using dom-to-image
-  //     domtoimage.toPng(captureRef.current)
-  //       .then((dataUrl) => {
-  //         // Create a temporary link to download the image
-  //         const link = document.createElement('a');
-  //         link.href = dataUrl;
-  //         link.download = 'logo.png'; // Set the name of the downloaded file
-  //         link.click(); // Simulate a click to start the download
-  //       })
-  //       .catch((error) => {
-  //         console.error('Error capturing the logo:', error);
-  //       });
-  //   }
-  // };
+  const handleCapture = () => {
+    // Capture the div as an image
+    domtoimage.toPng(divRef.current, { useCORS: true })
+      .then((dataUrl) => {
+        const link = document.createElement('a');
+        link.download = 'captured-image.png'; // The name of the image file
+        link.href = dataUrl;
+        link.click();
+      })
+      .catch((error) => {
+        console.error('Error capturing image:', error);
+      });
+  };
+
 
     return (
       <> 
@@ -38,7 +36,6 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
         <div className="l-screen screen5">
             <div className="l-wrap">
             <a className="back-button" onClick={() => navigateTo('screen4')}><img src="arrow-left.svg" /></a>
-            {/* <a className="next-button text" onClick={handleDownload} >Ready!</a> */}
               <div className="l-title-area">
 
                   <StepIndicator 
@@ -64,12 +61,13 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
                   accentColour={accentColour}
                   logoFontSize={logoFontSize}
                   logoFontSpacing={logoFontSpacing}
+                  divRef={divRef}
                 />
                 
             </div>
 
-            <SubmitForm />
-
+            {/* <SubmitForm /> */}
+            <a className="next-button text" onClick={handleCapture} >Ready!</a>
                 
             </div>
         </div>

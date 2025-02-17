@@ -22,7 +22,6 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
         <div className="l-screen screen4">
             <div className="l-wrap">
               <a className="back-button" onClick={() => navigateTo('screen3')}><img src="arrow-left.svg" /></a>
-              <a className="next-button" onClick={() => navigateTo('screen5')}><img src="arrow-right-white.svg" /></a>
               <div className="l-title-area">
 
                   <StepIndicator 
@@ -105,6 +104,8 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                 </div>
 
             </div>
+
+            <a className="next-button" onClick={() => navigateTo('screen5')}><img src="arrow-right-white.svg" /><span>Next</span></a>
 
         </div>
         </div>

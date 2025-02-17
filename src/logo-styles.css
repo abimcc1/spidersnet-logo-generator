@@ -39,13 +39,16 @@
 
 .logo-block .style-2 {
     font-size: 30px;
+    font-family: "Abhaya Libre", serif;
+    font-size: 30px;
+    letter-spacing: 0.8px;
 }
 .logo-block .style-2 .icon-wrapper {
     background-image: linear-gradient(#AEACB9, #17191C);
 }
 .logo-block .style-2 .company-name {
-    margin-left: -12px;
-    margin-top: 13px;
+    margin-left: -15px;
+    margin-top: 11px;
     background-color: #17191C;
 }
 
@@ -178,6 +181,8 @@
     flex-direction: column;
     letter-spacing: 1px;
     font-size: 25px;
+    font-family: "Questrial", serif;
+    text-transform: uppercase;
 }
 .logo-block .style-11 .company-name {
     border-top: 1px solid #000;
@@ -246,6 +251,8 @@
     font-size: 32px;
     font-weight: 400;
     background-color: #17191C;
+    font-family: "Playball", serif;
+    line-height: 1;
 }
 
 .logo-block .style-15  {

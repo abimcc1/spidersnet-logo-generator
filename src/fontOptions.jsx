@@ -111,4 +111,25 @@ export const fontOptions = [
     fontfamily: "Crimson Pro",
     stroke: "serif"
 },
+{
+    id: 17,
+    name: "Abhaya Libre",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');`,
+    fontfamily: "Abhaya Libre",
+    stroke: "serif"
+},
+{
+    id: 18,
+    name: "Playball",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');`,
+    fontfamily: "Playball",
+    stroke: "serif"
+},
+{
+    id: 19,
+    name: "Questrial",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');`,
+    fontfamily: "Questrial",
+    stroke: "serif"
+},
 ]
