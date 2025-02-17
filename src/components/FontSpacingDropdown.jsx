@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
-function FontSpacingDropdown({ logoFontSpacing, updateLogoFontSpacing }) {
-
+function FontSpacingDropdown({ logoFontSpacing, updateLogoFontSpacing, defaultFontSpacing }) {
 
   const handleChange = (e) => {
     updateLogoFontSpacing(e.target.value);
@@ -13,12 +12,11 @@ function FontSpacingDropdown({ logoFontSpacing, updateLogoFontSpacing }) {
         type="number"
         id="fontSpacing"
         name="fontSpacing"
-        value={logoFontSpacing || ''}
+        value={logoFontSpacing || defaultFontSpacing}
         onChange={handleChange}
         min="0"
         max="20"
         step="0.5"
-        placeholder="Default"
          />
       </>
     )

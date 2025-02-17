@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function FontSizeDropdown({ logoFontSize, updateLogoFontSize }) {
+function FontSizeDropdown({ logoFontSize, updateLogoFontSize, defaultFontSize }) {
 
 
   const handleChange = (e) => {
@@ -13,7 +13,7 @@ function FontSizeDropdown({ logoFontSize, updateLogoFontSize }) {
         type="number"
         id="fontSize"
         name="fontSize"
-        value={logoFontSize || ''}
+        value={logoFontSize || defaultFontSize}
         onChange={handleChange}
         min="1"
         max="100"

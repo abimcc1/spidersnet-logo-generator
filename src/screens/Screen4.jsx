@@ -50,6 +50,25 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                         logoFont={logoFont} 
                         updateLogoFont={updateLogoFont} 
                         fontOptions={fontOptions} 
+                        defaultFont={icon.fontFamily}
+                        />
+                    </div>
+
+                    <div className="settings-field half left">
+                        <label>Font Size (px)</label>
+                        <FontSizeDropdown
+                            logoFontSize={logoFontSize} 
+                            updateLogoFontSize={updateLogoFontSize}
+                            defaultFontSize={icon.fontSize}
+                        />
+                    </div>
+
+                    <div className="settings-field half right">
+                        <label>Font Spacing (px)</label>
+                        <FontSpacingDropdown
+                            logoFontSpacing={logoFontSpacing} 
+                            updateLogoFontSpacing={updateLogoFontSpacing}
+                            defaultFontSpacing={icon.fontSpacing}
                         />
                     </div>
 
@@ -66,22 +85,6 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                         <AccentColorDropdown
                             accentColour={accentColour} 
                             updateAccentColour={updateAccentColour}
-                        />
-                    </div>
-
-                    <div className="settings-field half left">
-                        <label>Font Size (px)</label>
-                        <FontSizeDropdown
-                            logoFontSize={logoFontSize} 
-                            updateLogoFontSize={updateLogoFontSize}
-                        />
-                    </div>
-
-                    <div className="settings-field half right">
-                        <label>Font Spacing (px)</label>
-                        <FontSpacingDropdown
-                            logoFontSpacing={logoFontSpacing} 
-                            updateLogoFontSpacing={updateLogoFontSpacing}
                         />
                     </div>
 

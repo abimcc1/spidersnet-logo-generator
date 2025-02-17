@@ -132,4 +132,11 @@ export const fontOptions = [
     fontfamily: "Questrial",
     stroke: "serif"
 },
+{
+    id: 20,
+    name: "Alexandria",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');`,
+    fontfamily: "Alexandria",
+    stroke: "serif"
+},
 ]
