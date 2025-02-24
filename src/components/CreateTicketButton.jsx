@@ -1,40 +1,34 @@
 import React, { useState } from 'react';
 
 const CreateTicketButton = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const handleCreateTicket = async () => {
-    setLoading(true);
-    setError(null);
-
     const taskData = {
       taskName: "New Task from React", // Example task name
       taskDescription: "This is a task created by a button click in React", // Example description
     };
-
+  
     try {
       const response = await fetch('https://spidersnet-logo-generator.pages.dev/createclickuptask', { // Replace with your worker URL
-        method: 'POST',
+        method: 'POST',  // Ensure this is POST
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json',  // Set correct content-type
         },
-        body: JSON.stringify(taskData),
+        body: JSON.stringify(taskData),  // Body of the request
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         alert('Ticket created successfully!');
       } else {
-        setError(data.error || 'Failed to create ticket');
+        alert('Error: ' + data.error || 'Failed to create ticket');
       }
     } catch (err) {
-      setError(err.message || 'An unexpected error occurred');
-    } finally {
-      setLoading(false);
+      console.error('Error:', err);
     }
   };
+  
 
   return (
     <div>
