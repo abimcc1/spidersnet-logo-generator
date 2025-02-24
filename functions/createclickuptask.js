@@ -1,5 +1,5 @@
-const CLICKUP_API_TOKEN = 'your_clickup_api_token'; // Replace with your ClickUp API token
-const CLICKUP_LIST_ID = 'your_clickup_list_id';  // Replace with your specific List ID
+const CLICKUP_API_TOKEN = 'Y264VXVIWMPQ4SS9KHWV2L123JRGP84K'; // Replace with your ClickUp API token
+const CLICKUP_LIST_ID = '901508351342';  // Replace with your specific List ID
 
 // The function that creates the ClickUp task
 async function createClickUpTask(taskName, taskDescription) {

@@ -14,7 +14,7 @@ const CreateTicketButton = () => {
     };
 
     try {
-      const response = await fetch('https://your-worker-subdomain.workers.dev', { // Replace with your worker URL
+      const response = await fetch('https://spidersnet-logo-generator.pages.dev/createclickuptask', { // Replace with your worker URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
