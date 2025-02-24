@@ -1,4 +1,4 @@
-const CLICKUP_API_TOKEN = 'Y264VXVIWMPQ4SS9KHWV2L123JRGP84K'; // Replace with your ClickUp API token
+const CLICKUP_API_TOKEN = 'pk_8727201_DILQ5NE4YYIR1V18E4OC43G9MW8HYMVG'; // Replace with your ClickUp API token
 const CLICKUP_LIST_ID = '901508351342';  // Replace with your specific List ID
 
 // The function that creates the ClickUp task
