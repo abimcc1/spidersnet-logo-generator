@@ -6,6 +6,7 @@ import { iconOptions } from '../iconOptions.jsx';
 // import TestLogoCanvas from "../components/TestLogoCanvas.jsx";
 // import html2canvas from "html2canvas";
 import domtoimage from 'dom-to-image';
+import CreateTicketButton from "../components/CreateTicketButton.jsx";
 
 // import SubmitForm from "../components/SubmitForm.jsx";
 
@@ -68,7 +69,7 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
 
             {/* <SubmitForm /> */}
             <a className="next-button text" onClick={handleCapture} >Ready!</a>
-                
+                <CreateTicketButton />
             </div>
         </div>
         </div>
