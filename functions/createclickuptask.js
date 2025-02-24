@@ -6,7 +6,7 @@ async function createClickUpTask(taskName, taskDescription) {
   const response = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/task`, {
     method: 'POST',
     headers: {
-      'Authorization': CLICKUP_API_TOKEN,
+      'Authorization': `Bearer ${CLICKUP_API_TOKEN}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
