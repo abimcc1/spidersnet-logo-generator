@@ -1,27 +1,26 @@
-const CLICKUP_API_TOKEN = 'pk_8727201_DILQ5NE4YYIR1V18E4OC43G9MW8HYMVG'; // Replace with your ClickUp API token
-const CLICKUP_LIST_ID = '901508351342';  // Replace with your specific List ID
-
-// The function that creates the ClickUp task
+// The function that creates the ClickUp task using OAuth or API Key
 async function createClickUpTask(taskName, taskDescription) {
+  const CLICKUP_API_KEY = 'pk_8727201_DILQ5NE4YYIR1V18E4OC43G9MW8HYMVG'; // Replace with your ClickUp API key
+  const CLICKUP_LIST_ID = '901508351342'; // Replace with your ClickUp List ID
+
   const response = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/task`, {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${CLICKUP_API_TOKEN}`,
+      'Authorization': `Bearer ${CLICKUP_API_KEY}`, // Using API Key for authentication
       'Content-Type': 'application/json',
+      'Accept': 'application/json',
     },
     body: JSON.stringify({
       name: taskName,
       description: taskDescription,
-      assignees: [],
-      tags: [],
     }),
   });
 
   if (response.ok) {
     const task = await response.json();
-    return task;
+    return task; // Return the created task
   } else {
-    // Log detailed error response
+    // Log the error and throw it
     const errorDetails = await response.text();
     console.error('Error response from ClickUp:', errorDetails);
     throw new Error(`Failed to create task. Status: ${response.status}, Details: ${errorDetails}`);
