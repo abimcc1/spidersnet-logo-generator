@@ -21,7 +21,10 @@ async function createClickUpTask(taskName, taskDescription) {
     const task = await response.json();
     return task;
   } else {
-    throw new Error(`Failed to create task. Status: ${response.status}`);
+    // Log detailed error response
+    const errorDetails = await response.text();
+    console.error('Error response from ClickUp:', errorDetails);
+    throw new Error(`Failed to create task. Status: ${response.status}, Details: ${errorDetails}`);
   }
 }
 
