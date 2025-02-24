@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 const CreateTicketButton = () => {
+    const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleCreateTicket = async () => {
     const taskData = {
