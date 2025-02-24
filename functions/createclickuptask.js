@@ -1,12 +1,12 @@
-// The function that creates the ClickUp task using OAuth or API Key
+// The function that creates the ClickUp task using a personal API Key
 async function createClickUpTask(taskName, taskDescription) {
-  const CLICKUP_API_KEY = 'pk_8727201_DILQ5NE4YYIR1V18E4OC43G9MW8HYMVG'; // Replace with your ClickUp API key
+  const CLICKUP_API_KEY = 'pk_8727201_DILQ5NE4YYIR1V18E4OC43G9MW8HYMVG'; // Replace with your personal ClickUp API key
   const CLICKUP_LIST_ID = '901508351342'; // Replace with your ClickUp List ID
 
   const response = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/task`, {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${CLICKUP_API_KEY}`, // Using API Key for authentication
+      'Authorization': `${CLICKUP_API_KEY}`, // Use the personal API key without 'Bearer'
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
