@@ -1,8 +1,10 @@
-const CLICKUP_API_TOKEN = 'your_clickup_api_token'; // Replace with your ClickUp API token
-const CLICKUP_TEAM_ID = 'your_clickup_team_id';  // Replace with your ClickUp Team ID
-const CLICKUP_LIST_ID = 'your_clickup_list_id';  // Replace with the specific List ID
+// your-worker.js
 
-async function createClickUpTask(taskName, taskDescription) {
+const CLICKUP_API_TOKEN = 'your_clickup_api_token'; // Replace with your ClickUp API token
+const CLICKUP_LIST_ID = 'your_clickup_list_id';  // Replace with your specific List ID
+
+// Export this function for external use or testing
+export async function createClickUpTask(taskName, taskDescription) {
   const response = await fetch(`https://api.clickup.com/api/v2/list/${CLICKUP_LIST_ID}/task`, {
     method: 'POST',
     headers: {
