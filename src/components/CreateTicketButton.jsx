@@ -31,9 +31,9 @@ const CreateTicketButton = ({ companyName, slogan, icon, fontFamily, fontColour,
       const data = await response.json();
   
       if (response.ok) {
-        alert('Ticket created successfully!');
+        alert('Logo submitted successfully!');
       } else {
-        alert('Error: ' + data.error || 'Failed to create ticket');
+        alert('Error: ' + data.error || 'Failed to submit logo');
       }
     } catch (err) {
       console.error('Error:', err);
