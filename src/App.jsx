@@ -6,6 +6,7 @@ import Screen2 from "./screens/Screen2.jsx";
 import Screen3 from "./screens/Screen3.jsx";
 import Screen4 from "./screens/Screen4.jsx";
 import Screen5 from "./screens/Screen5.jsx";
+import Screen6 from "./screens/Screen6.jsx";
 
 import FontInjector from "./components/FontInjector.jsx";
 
@@ -201,6 +202,14 @@ function App() {
                                         accentColour={accentColour}
                                         logoFontSize={logoFontSize}
                                         logoFontSpacing={logoFontSpacing}
+                                      />}
+
+      
+      {currentScreen === 'screen6' && <Screen6 
+                                        navigateTo={navigateTo} 
+                                        currentScreen={currentScreen}
+                                        completedSteps={completedSteps}
+                                        companyName={companyName} 
                                       />}
 
       {/* <div>

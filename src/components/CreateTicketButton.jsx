@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CreateTicketButton = ({ companyName, slogan, icon, fontFamily, fontColour, accentColour, logoFontSize, logoFontSpacing, generatedURL }) => {
+const CreateTicketButton = ({ companyName, slogan, icon, navigateTo, fontFamily, fontColour, accentColour, logoFontSize, logoFontSpacing, generatedURL }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -11,11 +11,11 @@ const CreateTicketButton = ({ companyName, slogan, icon, fontFamily, fontColour,
       Icon style: ${icon.id}
       Company Name: ${companyName}
       Slogan: ${slogan}
-      Font Family: ${fontFamily}
-      Font Colour: ${fontColour}
-      Accent Colour: ${accentColour}
-      Font Size: ${logoFontSize}
-      Font Spacing: ${logoFontSpacing}
+      Font Family: ${fontFamily || 'default'}
+      Font Colour: ${fontColour || 'default'}
+      Accent Colour: ${accentColour || 'default'}
+      Font Size: ${logoFontSize || 'default'}
+      Font Spacing: ${logoFontSpacing || 'default'}
       `, 
     };
   
@@ -31,7 +31,7 @@ const CreateTicketButton = ({ companyName, slogan, icon, fontFamily, fontColour,
       const data = await response.json();
   
       if (response.ok) {
-        alert('Logo submitted successfully!');
+        navigateTo('screen6');
       } else {
         alert('Error: ' + data.error || 'Failed to submit logo');
       }

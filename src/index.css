@@ -32,6 +32,7 @@ body {
 
 .button {
   background: #662FEB;
+  text-decoration: none;
   border-radius: 8px;
   color: #fff;
   font-size: 18px;
@@ -217,7 +218,8 @@ body {
 .l-screen.screen2,
 .l-screen.screen3,
 .l-screen.screen4,
-.l-screen.screen5 {
+.l-screen.screen5,
+.l-screen.screen6 {
   text-align: center;
   padding-bottom: 50px;
 }
@@ -225,7 +227,8 @@ body {
 .l-screen.screen2 h2,
 .l-screen.screen3 h2,
 .l-screen.screen4 h2, 
-.l-screen.screen5 h2 {
+.l-screen.screen5 h2,
+.l-screen.screen6 h2 {
   font-size: 42px;
   margin-bottom: 15px;
   @media screen and (max-width: 600px) {
@@ -635,6 +638,7 @@ body {
  flex: 1;
  display: flex;
  flex-direction: column;
+ width: 100%;
 }
 .l-screen.screen5 .l-canvas {
   width: 100%;
