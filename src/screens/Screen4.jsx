@@ -15,7 +15,7 @@ import FontSpacingDropdown from "../components/FontSpacingDropdown.jsx";
 function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updateCompanyName, slogan, updateSlogan, selectedLogo, logoFont, updateLogoFont, selectedFont, fontColour, updateFontColour, accentColour, updateAccentColour, logoFontSize, updateLogoFontSize, logoFontSpacing, updateLogoFontSpacing }) {
 
     const icon = iconOptions.find(item => item.id === selectedLogo);
-
+    console.log(selectedLogo);
     return (
       <> 
       <Header />

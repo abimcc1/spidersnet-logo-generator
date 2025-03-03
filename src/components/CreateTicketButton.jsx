@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-const CreateTicketButton = () => {
+const CreateTicketButton = ({ companyName, slogan, icon, fontFamily, fontColour, accentColour, logoFontSize, logoFontSpacing, generatedURL }) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
   const handleCreateTicket = async () => {
     const taskData = {
-      taskName: "New Task from React", // Example task name
-      taskDescription: "This is a task created by a button click in React", // Example description
+      taskName: `Logo Generator - ${companyName}`, // Example task name
+      taskDescription: `${generatedURL}
+      test`, // Example description
     };
   
     try {
@@ -33,12 +34,12 @@ const CreateTicketButton = () => {
   
 
   return (
-    <div>
-      <button onClick={handleCreateTicket} disabled={loading}>
-        {loading ? 'Creating Ticket...' : 'Create ClickUp Ticket'}
-      </button>
+    <>
+      <a onClick={handleCreateTicket} className="next-button text"  disabled={loading}>
+        {loading ? 'Creating Ticket...' : 'Ready!'}
+      </a>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-    </div>
+    </>
   );
 };
 

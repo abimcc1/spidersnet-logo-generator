@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
 import './App.css'
 import Screen1 from "./screens/Screen1.jsx";
 import Screen2 from "./screens/Screen2.jsx";
@@ -12,6 +13,7 @@ import { fontOptions } from './fontOptions.jsx';
 
 
 function App() {
+
 
   const initialScreen = localStorage.getItem('currentScreen') || 'screen1';
   const [currentScreen, setCurrentScreen] = useState('screen1');
@@ -29,11 +31,29 @@ function App() {
     }
   };
 
+  // // Helper function to update the query string in the URL
+  // const updateQueryString = (key, value) => {
+  //   const queryString = new URLSearchParams(location.search);
+
+  //   if (value) {
+  //     queryString.set(key, value);
+  //   } else {
+  //     queryString.delete(key);  // Remove key if value is empty
+  //   }
+
+  //   navigate({
+  //     pathname: location.pathname,
+  //     search: queryString.toString(),
+  //   });
+  // };
+
 
   const [companyName, setCompanyName] = useState('');
   const updateCompanyName = (newName) => {
     setCompanyName(newName);
+    // updateQueryString('companyName', newName);
   };
+
 
   const [slogan, setSlogan] = useState('');
   const updateSlogan = (newSlogan) => {
@@ -79,6 +99,42 @@ function App() {
   const [selectedLogo, setSelectedLogo] = useState(1);
 
 
+
+  
+  const location = useLocation();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if(params.get('selectedLogo')){
+      setCurrentScreen('screen5');
+      setSelectedLogo(params.get('selectedLogo'));
+    }
+    if(params.get('companyName')){
+      setCompanyName(params.get('companyName'));
+    }
+    if(params.get('slogan')){
+      setSlogan(params.get('slogan'));
+    }
+    if(params.get('selectedFont')){
+      setSelectedFont({
+        ...selectedFont,  // Preserve the existing properties in selectedFont (if any)
+        fontfamily: params.get('selectedFont')  // Set the fontFamily property
+      });
+    }
+    if(params.get('fontColour')){
+      setFontColour(params.get('fontColour'));
+    }
+    if(params.get('accentColour')){
+      setAccentColour(params.get('accentColour'));
+    }
+    if(params.get('logoFontSize')){
+      setLogoFontSize(params.get('logoFontSize'));
+    }
+    if(params.get('logoFontSpacing')){
+      setLogoFontSpacing(params.get('logoFontSpacing'));
+    }
+
+   
+  }, [location.search]); // Runs whenever the location changes
 
   return (
     <>
