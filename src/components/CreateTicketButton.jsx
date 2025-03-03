@@ -8,14 +8,14 @@ const CreateTicketButton = ({ companyName, slogan, icon, navigateTo, fontFamily,
     const taskData = {
       taskName: `Logo Generator - ${companyName}`, // Example task name
       taskDescription: `${generatedURL}
-      Icon style: ${icon.id}
-      Company Name: ${companyName}
-      Slogan: ${slogan}
-      Font Family: ${fontFamily || 'default'}
-      Font Colour: ${fontColour || 'default'}
-      Accent Colour: ${accentColour || 'default'}
-      Font Size: ${logoFontSize || 'default'}
-      Font Spacing: ${logoFontSpacing || 'default'}
+Logo Style: Logo ${icon.id}
+Company Name: ${companyName}
+Slogan: ${slogan}
+Font Family: ${fontFamily || 'default'}
+Font Colour: ${fontColour || 'default'}
+Accent Colour: ${accentColour || 'default'}
+Font Size: ${logoFontSize || 'default'}
+Font Spacing: ${logoFontSpacing || 'default'}
       `, 
     };
   
