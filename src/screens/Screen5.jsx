@@ -17,7 +17,7 @@ function Screen5({ navigateTo, currentScreen, completedSteps, companyName, sloga
 
   // Generate URL
   const urlBase = window.location.origin;
-  const urlQuery = `?selectedLogo=${selectedLogo}&companyName=${encodeURIComponent(companyName)}&slogan=${encodeURIComponent(slogan)}&selectedFont=${encodeURIComponent(selectedFont?.fontfamily)}&fontColour=${encodeURIComponent(fontColour)}&accentColour=${encodeURIComponent(accentColour)}&logoFontSize=${logoFontSize}&logoFontSpacing=${logoFontSpacing}`;
+  const urlQuery = `?selectedLogo=${selectedLogo}&companyName=${encodeURIComponent(companyName)}&slogan=${encodeURIComponent(slogan)}&selectedFont=${encodeURIComponent(selectedFont?.fontfamily ? selectedFont.fontfamily : 'default')}&fontColour=${encodeURIComponent(fontColour)}&accentColour=${encodeURIComponent(accentColour)}&logoFontSize=${logoFontSize}&logoFontSpacing=${logoFontSpacing}`;
   const generatedURL = urlBase + urlQuery;
 
   const divRef = useRef(null);
