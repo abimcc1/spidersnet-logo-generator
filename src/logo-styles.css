@@ -31,323 +31,923 @@
 }
 .logo-block .style-1 .icon-wrapper {
     margin-right: 15px;
-    background-color: #E20000;
 }
 .logo-block .style-1 span {
     display: block;
 }
-
 .logo-block .style-2 {
-    font-size: 30px;
-    font-family: "Abhaya Libre", serif;
-    font-size: 30px;
-    letter-spacing: 0.8px;
-}
-.logo-block .style-2 .icon-wrapper {
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-.logo-block .style-2 .company-name {
-    margin-left: -15px;
-    margin-top: 11px;
-    background-color: #17191C;
-}
-
-.logo-block .style-3 {
-    font-family: "Carrois Gothic SC", serif;
-    letter-spacing: 1.5px;
-    text-transform: lowercase;
-    flex-direction: column;
-    font-size: 30px;
-}
-.logo-block .style-3 .icon-wrapper {
-    margin-bottom: 5px;
-    background-image: linear-gradient(#021A48, #0555EE);
-}
-.logo-block .style-3 .company-name {
-    background-color: #17191C;
-}
-
-.logo-block .style-4 {
-    flex-direction: column;
-    font-family: "Playfair Display SC", serif;
-    font-size: 25px;
-    letter-spacing: 1px;
-}
-.logo-block .style-4 .icon-wrapper {
-    margin-bottom: 5px;
-    background: #B08B00;
-}
-
-.logo-block .style-5 {
-    font-family: "Montserrat", serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.logo-block .style-5 .icon-wrapper {
-    margin-right: 12px;
-    background-color: #00256C;
-}
-.logo-block .style-5 .company-name {
-    background-color: #00256C;
-}
-
-.logo-block .style-6 {
-    font-family: "Atkinson Hyperlegible", serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 24px;
-    text-align: left;
-    line-height: 1.2;
-}
-.logo-block .style-6 .icon-wrapper {
-    margin-right: 10px;
-    background-image: linear-gradient(#D7AA02, #503F00);
-}
-.logo-block .style-6 .company-name {
-    background-color: #535160;
-}
-.logo-block .style-6 span {
-    display: block;
-}
-
-.logo-block .style-7 { 
-    font-family: "Sofia Sans", serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 28px;
-}
-.logo-block .style-7 .icon-wrapper {
-    background-image: linear-gradient(#780000, #EA0000);
-}
-.logo-block .style-7 .company-name {
-    margin-bottom: 30px;
-    margin-left: -80px;
-}
-
-.logo-block .style-8 {
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 25px;
-}
-.logo-block .style-8 .icon-wrapper {
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-.logo-block .style-8 .company-name {
-    margin-left: -30px;
-    background-color: #135934;
-}
-
-.logo-block .style-9 {
     flex-direction: column;
     font-family: "Barlow", serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 500;
     font-style: italic;
-    color: #17191C;
 }
-.logo-block .style-9 .icon-wrapper {
+.logo-block .style-2 .icon-wrapper {
     margin-bottom: 8px;
-    background: #E20000;
 }
-.logo-block .style-9 .company-name {
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-
-
-.logo-block .style-10  {
-    flex-direction: column;
-    font-family: "Hedvig Letters Serif", serif;
-    margin-bottom: 8px;
-    letter-spacing: 3px;
+.logo-block .style-3 {
+    font-family: "Geologica", serif;
     text-transform: uppercase;
-    font-size: 22px;
-}
-.logo-block .style-10 .company-name {
-    border-bottom: 1px solid #AEACB9;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 8px;
-    margin-bottom: 10px;
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-.logo-block .style-10 .slogan {
-    font-size: 14px;
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-
-.logo-block .style-11  {
-    flex-direction: column;
-    letter-spacing: 1px;
-    font-size: 25px;
-    font-family: "Questrial", serif;
-    text-transform: uppercase;
-}
-.logo-block .style-11 .company-name {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    padding: 8px;
-    background-image: linear-gradient(#D7AA02, #503F00);
-}
-
-.logo-block .style-12  {
-    flex-direction: column;
-    letter-spacing: 1px;
-    font-family: "Barlow";
-}
-.logo-block .style-12 .company-name {
-    font-weight: 800;
-    letter-spacing: 3px;
-    font-style: italic;
-    font-size: 30px;
-    margin-bottom: 5px;
-    background-image: linear-gradient(#AEACB9, #17191C);
-}
-.logo-block .style-12 .slogan {
-    font-size: 17px;
-    font-weight: 600;
     letter-spacing: 2px;
-    background-color: #E20000;
-    text-transform: uppercase;
-}
-
-.logo-block .style-13  {
-    flex-direction: column;
-    letter-spacing: 1px;
-    align-items: flex-start;
-    font-family: "Montserrat";
-}
-.logo-block .style-13  .icon-wrapper {
-    height: 12px;
-    background-color: #E20000;
-}
-.logo-block .style-13 .company-name {
     font-weight: 900;
-    font-size: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+.logo-block .style-3 .title-wrap {
+    margin-left: -205px;
     margin-bottom: 5px;
-    background-color: #17191C;
+    padding-right: 5px;
 }
-.logo-block .style-13 .slogan {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    background-color: #17191C;
+.logo-block .style-3 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-4 {
+    font-family: "Rubik Mono One", monospace;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 21px;
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
-
-.logo-block .style-14  {
+.logo-block .style-4 .title-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-bottom: 3px;
+}
+.logo-block .style-5 {
+    font-family: "Spinnaker", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
     flex-direction: column;
 }
-.logo-block .style-14 .company-name {
-    font-family: "Poppins";
-    font-weight: 700;
-    font-size: 26px;
-    text-transform: uppercase;
-    margin-bottom: -5px;
-    background-color: #0400C5;
-}
-.logo-block .style-14 .slogan {
-    font-size: 32px;
-    font-weight: 400;
-    background-color: #17191C;
-    font-family: "Playball", serif;
-    line-height: 1;
-}
-
-.logo-block .style-15  {
-    flex-direction: column;
-    font-family: "Aoboshi One";
-    font-weight: 400;
-    text-transform: uppercase;
-}
-.logo-block .style-15 .company-name {
-    font-size: 23px;
-    letter-spacing: 2.8px;
-    background-color: #135934;
+.logo-block .style-5 .icon-wrapper  {
     margin-bottom: 5px
 }
-.logo-block .style-15 .slogan {
-    font-size: 12px;
-    letter-spacing: 1px;
-    background-color: #535160;
-}
-
-.logo-block .style-16  {
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: "REM", serif;
-    text-align: left;
-}
-.logo-block .style-16 .company-name {
-    font-weight: 800;
+.logo-block .style-6 {
+    font-family: "Geologica", sans-serif;
     text-transform: uppercase;
-    font-size: 24px;
-    letter-spacing: 3.5px;
-    background-color: #17191C;
-    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: 31px;
+    font-weight: 700;
     font-style: italic;
-    line-height: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-6 .title-wrap {
+    margin-top: 27px;
+    margin-left: -15px;
+}
+.logo-block .style-6 .company-name {
+    padding-right: 5px;
+}
+.logo-block .style-6 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-6 .slogan {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.logo-block .style-7 {
+    font-family: "Sofia Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 27px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-7 .title-wrap {
+    margin-top: -15px;
+    margin-left: -85px;
+}
+.logo-block .style-7 .company-name {
+    font-weight: 800;
+} 
+.logo-block .style-7 .company-name span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-7 .slogan {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.logo-block .style-8 {
+    font-family: "REM", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-8 .company-name span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-8 .title-wrap {
+    margin-left: -45px;
+}
+.logo-block .style-9 {
+    font-family: "Geologica", sans-serif;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    line-height: 1.1;
+    position: relative;
+}
+.logo-block .style-9 .icon-wrapper {
+    position: absolute;
+    right: -30px;
+    top: -35px;
+}
+.logo-block .style-9 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-9 .slogan {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.logo-block .style-10 {
+    font-family: "Aoboshi One", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-11 {
+    font-family: "Outfit", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-11 span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-12 {
+    font-family: "Questrial", sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-12 .icon-wrapper {
+    margin-right: 15px;
+}
+.logo-block .style-12 span {
+    display: block;
+}
+.logo-block .style-13 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    word-spacing: -5px;
+}
+.logo-block .style-13 span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-14 {
+    font-family: "Radley", sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-14 .slogan {
+    font-family: "REM", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2.8px;
+    margin-top: 5px;
+}
+.logo-block .style-15 {
+    font-family: "Abhaya Libre", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-15 .icon-wrapper {
+    margin-top: -15px;
+    margin-right: -20px;
+}
+.logo-block .style-15 .slogan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+}
+.logo-block .style-16 {
+    font-family: "Syncopate", sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 .logo-block .style-16 span {
     display: block;
 }
-.logo-block .style-16 .slogan {
-    font-size: 10px;
-    letter-spacing: 1px;
-    background-color: #E20000;
-    font-weight: 500;
-    text-transform: uppercase;
+.logo-block .style-16 .icon-wrapper {
+    margin-right: 10px;
 }
-
-.logo-block .style-17  {
+.logo-block .style-17 {
+    font-family: "REM", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    font-family: "Fredoka", serif;
-    font-weight: 600;
+    font-style: italic;
+    position: relative;
+}
+.logo-block .style-17 span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-17 .icon-wrapper {
+    position: absolute;
+    left: -10px;
+    top: -50px;
+}
+.logo-block .style-18 {
+    font-family: "Geologica", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-18 span:not(:first-child) {
+    font-weight: 300;
+}
+.logo-block .style-18 .title-wrap {
+    margin-top: -10px;
+}
+.logo-block .style-19 {
+    font-family: "Cardo", sans-serif;
+    font-size: 24px;
     letter-spacing: 3.5px;
-    font-size: 22px;
     text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
 }
-.logo-block .style-17 .company-name {
-    background-color: #535160;
-    margin-bottom: 5px;
-    line-height: 1;
-    border: 1.5px solid #FF6A00;
-    border-radius: 6px;
-    padding: 5px;
+.logo-block .style-19 .company-name {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
-.logo-block .style-17 .company-name span:first-child {
-   background-color: #FF6A00;
-   background-size: 100%;
-   -webkit-background-clip: text;
-   -moz-background-clip: text;
-   -webkit-text-fill-color: transparent; 
-   -moz-text-fill-color: transparent;
+.logo-block .style-19 .slogan {
+    font-size: 14px;
 }
-.logo-block .style-17 .slogan {
-    background-color: #535160;
+.logo-block .style-20 {
+    font-family: "Questrial", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.logo-block .style-21 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+.logo-block .style-21 .slogan {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: "Darker Grotesque", sans-serif;
+    letter-spacing: 3.5px;
+}
+.logo-block .style-22 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.logo-block .style-22 .slogan {
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.6px;
-}
-
-.logo-block .style-18  {
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 4px;
-    border: 1px solid #AEACB9;
-    padding: 10px;
-    font-family: "Crimson Pro", serif;
-    font-weight: 600;
-    letter-spacing: 4px;
-    font-size: 27px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-.logo-block .style-18 .company-name {
-    background-color: #535160;
+.logo-block .style-22:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 40px;
+    background: #000;
     margin-bottom: 5px;
 }
-.logo-block .style-18 .slogan {
-    background-color: #888793;
-    font-size: 15px;
+.logo-block .style-23 {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.logo-block .style-23 .slogan {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    margin-top: 5px;
+    background-color: #000;
+    background-size: 100%;
+    -webkit-background-clip: initial !important;
+    -moz-background-clip: initial !important;
+    -webkit-text-fill-color: #fff !important;
+    -moz-text-fill-color: #fff !important;
+    color: #fff;
+    border-radius: 100px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.logo-block .style-24 {
+    font-family: "Aoboshi One", sans-serif;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+.logo-block .style-24 .slogan {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.logo-block .style-25 {
+    font-family: "REM", sans-serif;
+    font-size: 24px;
+    letter-spacing: 3.5px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1;
+}
+.logo-block .style-25 span {
+    display: block;
+}
+.logo-block .style-25 .slogan {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.logo-block .style-26 {
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    letter-spacing: 3.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+.logo-block .style-26 .company-name {
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+.logo-block .style-26 .slogan {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+}
+.logo-block .style-27 {
+    font-family: "Radley", serif;
+    font-size: 23px;
+    letter-spacing: 3.5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+.logo-block .style-27 .slogan {
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    margin-top: 2px;
+}
+.logo-block .style-28 {
+    font-family: "Gruppo", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.logo-block .style-28 .slogan { 
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: initial !important;
+    -moz-background-clip: initial !important;
+    -webkit-text-fill-color: #000;
+    -moz-text-fill-color: #000;
+}
+.logo-block .style-28:before { 
+    content: '';
+    background: #000;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+}
+
+.logo-block .style-29 {
+    font-family: "Syne", sans-serif;
+    font-size: 22px;
+    letter-spacing: 3.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+}
+.logo-block .style-29 .company-name {
+    background-color: transparent !important;
+    -webkit-background-clip: initial !important;
+    -moz-background-clip: initial !important;
+    -webkit-text-fill-color: #fff;
+    -moz-text-fill-color: #fff;
+    margin-left: 12px;
+    position: relative;
+}
+.logo-block .style-29 .company-name:before,
+.logo-block .style-29 .company-name:after {
+    content: '';
+    width: 3px;
+    background: linear-gradient(90deg, #AEACB9 0%, #17191C 100%);
+    position: absolute;
+    left: -12px;
+    top: 0;
+    bottom: 0;
+}
+.logo-block .style-29 .company-name:after {
+    left: -6px;
+}
+.logo-block .style-29 .company-name div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo-block .style-29 span {
+    display: inline-block;
+    background: linear-gradient(270deg, #AEACB9 0%, #17191C 100%);
+    padding: 0px 5px;
+}
+.logo-block .style-29 .slogan {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.logo-block .style-30 {
+    font-family: "Outfit", sans-serif;
+    font-size: 23px;
+    letter-spacing: 3.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.logo-block .style-30 span:not(:first-child) {
+    font-weight: 300;
+}
+.logo-block .style-30 span:not(:first-child):before {
+    content: '';
+    height: 50px;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    top: -9px;
+    margin-left: -6px;
+}
+.logo-block .style-31 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    border: 1px solid #000;
+    padding: 10px 15px;
+}
+.logo-block .style-31:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    
+}
+.logo-block .style-31 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-32 {
+    font-family: "Blinker", sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-align: center;
+}
+.logo-block .style-32 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-32 .slogan {
+    font-size: 16px;
+    font-weight: 300;
+}
+.logo-block .style-33 {
+    font-family: "Outfit", sans-serif;
+    font-size: 23px;
+    letter-spacing: 3.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.logo-block .style-33 .company-name {
+    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
+ }
+.logo-block .style-33 span:not(:first-child) {
+    font-weight: 300;
+}
+.logo-block .style-33 span:not(:first-child):before {
+    content: '';
+    height: 50px;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    top: -9px;
+    margin-left: -6px;
+}
+.logo-block .style-34 {
+    font-family: "Cardo", sans-serif;
+    font-size: 23px;
+    letter-spacing: 3.5px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-34 .slogan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.logo-block .style-35 {
+    font-family: "Questrial", sans-serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-35 .title-wrap {
+    margin-top: 10px;
+}
+.logo-block .style-36 {
+    font-family: "Palanquin Dark", sans-serif;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.3;
+}
+.logo-block .style-36 .slogan {
+    font-size: 16px;
+    font-family: "Darker Grotesque", sans-serif;
+    letter-spacing: 3.2px;
+    margin-top: 5px;
+}
+.logo-block .style-37 {
+    font-family: "Syne", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo-block .style-38 {
+    font-family: "REM", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.logo-block .style-38 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-38 .icon-wrapper {
+    order: 2;
+}
+.logo-block .style-38 .title-wrap {
+    order: 1;
+    margin-right: 5px;
+}
+.logo-block .style-39 {
+    font-family: "Aoboshi One", sans-serif;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-block .style-39 .slogan {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+.logo-block .style-40 {
+    font-family: "Geologica", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    font-style: italic;
+}
+.logo-block .style-40 span {
+    display: block;
+    padding-right: 5px;
+}
+.logo-block .style-40 span:not(:first-child) {
+    font-weight: 300;
+}
+.logo-block .style-41 {
+    font-family: "Fredoka", sans-serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.logo-block .style-41 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-41 .slogan {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+.logo-block .style-41 .title-wrap {
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.logo-block .style-42 {
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.logo-block .style-42 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-42 .icon-wrapper {
+    position: absolute;
+    left: -28px;
+    top: -7px;
+    bottom: -7px;
+    right: -105px;
+    mask-size: 100% 100%;
+}
+.logo-block .style-42 .company-name {
+    position: relative;
+    -webkit-background-clip: initial !important;
+    -moz-background-clip: initial !important;
+    -webkit-text-fill-color: #fff;
+    -moz-text-fill-color: #fff;
+}
+.logo-block .style-43 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-block .style-43 .title-wrap {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    margin-top: -5px;
+}
+.logo-block .style-43 span:not(:first-child) {
+    font-weight: 400;
+}
+.logo-block .style-44 {
+    font-family: "Syne", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.logo-block .style-44 .title-wrap {
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.logo-block .style-44 span {
+    display: block;
+}
+.logo-block .style-45 {
+    font-family: "Outfit", sans-serif;
+    font-size: 21px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.logo-block .style-45 .title-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -14px;
+}
+.logo-block .style-45 span:not(:first-child) {
+    font-weight: 400;
+}
+/* .logo-block .style-46 {
+    font-family: "Syncopate", sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.logo-block .style-46 .title-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -14px;
+    background-color: #fff;
+}
+.logo-block .style-46 span {
+    display: block;
+}
+.logo-block .style-46 span:not(:first-child) {
+    font-size: 9px;
+    letter-spacing: 1;
+} */
+.logo-block .style-47 {
+    font-family: "Syncopate", sans-serif;
+    font-size: 23px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.logo-block .style-47 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-47 .title-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.logo-block .style-48 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.logo-block .style-48 span:not(:first-child) {
+    display: none;
+}
+.logo-block .style-48 .title-wrap {
+    margin-left: -70px;
+    margin-bottom: 10px;
+}
+.logo-block .style-48 .slogan {
+    font-family: "Archivo", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-left: 40px;
+    margin-top: 3px;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
+    background-size: 100%;
+    -webkit-background-clip: initial !important;
+    -moz-background-clip: text !important;
+    -webkit-text-fill-color: #fff;
+    -moz-text-fill-color: #fff;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    padding-left: 15px;
+}
+.logo-block .style-48 .slogan:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(100% - 10px);
+    width: 20px;
+    -webkit-transform: skew(-40deg);
+    -moz-transform: skew(-40deg);
+    -o-transform: skew(-40deg);
+    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
+}
+.logo-block .style-48 .icon-wrapper {
+    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
 }

@@ -68,7 +68,7 @@ function App() {
   };
   useEffect(() => {
     // Find the selected font object based on logoFont ID
-    setSelectedFont(fontOptions.find(font => font.id === (parseInt(logoFont, 10))));
+    setSelectedFont(fontOptions.find(font => font.id === logoFont));
   }, [logoFont]);  // Dependency array ensures this runs whenever logoFont changes
 
   // const [logoIcon, setLogoIcon] = useState(1);

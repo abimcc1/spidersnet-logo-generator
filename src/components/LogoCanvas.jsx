@@ -35,28 +35,28 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
 
 
 
-  const [base64Icon, setBase64Icon] = useState(null);  // State to store the base64 string of the icon
+  // const [base64Icon, setBase64Icon] = useState(null);  // State to store the base64 string of the icon
 
-  // Convert the image URL to base64
-  const convertToBase64 = (url) => {
-    const img = new Image();
-    img.src = url;
-    img.crossOrigin = 'Anonymous'; // Make sure the image is accessible (CORS issue)
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      ctx.drawImage(img, 0, 0);
-      setBase64Icon(canvas.toDataURL());  // Set the base64 string to state
-    };
-  };
+  // // Convert the image URL to base64
+  // const convertToBase64 = (url) => {
+  //   const img = new Image();
+  //   img.src = url;
+  //   img.crossOrigin = 'Anonymous'; // Make sure the image is accessible (CORS issue)
+  //   img.onload = () => {
+  //     const canvas = document.createElement('canvas');
+  //     const ctx = canvas.getContext('2d');
+  //     canvas.width = img.width;
+  //     canvas.height = img.height;
+  //     ctx.drawImage(img, 0, 0);
+  //     setBase64Icon(canvas.toDataURL());  // Set the base64 string to state
+  //   };
+  // };
 
-  useEffect(() => {
-    if (icon.url) {
-      convertToBase64(icon.url);  // Convert image URL to base64 on load
-    }
-  }, [icon.url]);
+  // useEffect(() => {
+  //   if (icon.url) {
+  //     convertToBase64(icon.url);  // Convert image URL to base64 on load
+  //   }
+  // }, [icon.url]);
 
     const dynamicIconStyle = {
       ...(
@@ -65,7 +65,7 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
           backgroundImage: accentStyle === "solid" ? "none" : accentColour, 
         }
       ),
-      maskImage: base64Icon ? `url(${base64Icon})` : 'none',  // Apply the base64 image as maskImage
+      maskImage: icon.url ? `url(${icon.url})` : 'none',  // Apply the base64 image as maskImage
       maskRepeat: "no-repeat",
     }
 
@@ -101,50 +101,12 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
 
             <div className="logo-block" key={icon.id}>
               <div className="logo-block-inner">
-
-              {/* <svg width="400" height="300" className={icon.class} id={icon.class} xmlns="http://www.w3.org/2000/svg" style={{border: '1px solid black'}}>
-
-                 <image 
-                  href={icon.url}
-                  x="20" 
-                  y={(300 - icon.iconHeight) / 2}
-                  width={icon.iconWidth} 
-                  height={icon.iconHeight} 
-                /> 
-
-
-                <svg 
-                  x="0" 
-                  y="0" 
-                  width="100%"      
-                  height="100%"     
-                  viewBox="0 0 400 300" 
-                  dominant-baseline="middle" 
-                  text-anchor="middle"
-                  // dangerouslySetInnerHTML={{ __html: icon.svg }}
-                  href={icon.url}
-                />
-
-
-                <text 
-                  x="70" 
-                  y="150" 
-                  fontSize="24" 
-                  fill="black"
-                  className="company-name"
-                  // textAnchor="middle" 
-                  dominantBaseline="middle" 
-                >
-               {companyName}
-                </text>
-              </svg> */}
-
-
-                
-                 <div className={icon.class} ref={divRef}>
+                 <div className={`style-${icon.id}`} ref={divRef}>
                     {icon.url && <div id="iconWrapper" className="icon-wrapper" style={dynamicIconStyle}><img id="maskImage" src={icon.url} /></div>}
-                    <div className="company-name" style={dynamicFontStyle}><WordWrapper text={companyName} /></div>
-                    {icon.slogan && <div className="slogan" style={dynamicSloganStyle}>{slogan}</div>}
+                    <div className="title-wrap">
+                      <div className="company-name" style={dynamicFontStyle}><WordWrapper text={companyName} /></div>
+                      {icon.slogan && <div className="slogan" style={dynamicSloganStyle}>{slogan}</div>}
+                    </div>
               </div> 
               </div>
             </div>

@@ -4,6 +4,7 @@ body, html {
   border: none;
   height: 100%;
   font-family: "Work Sans", serif;
+  -webkit-font-smoothing: antialiased;
 }
 input,
 select {
@@ -471,6 +472,7 @@ body {
   font-size: 30px;
   text-align: center;
   aspect-ratio: 4/3;
+  overflow: hidden;
 }
 .l-settings__wrap {
   display: flex;
@@ -503,7 +505,8 @@ body {
   }
 }
 .l-canvas .logo-block {
-  width: auto;
+  width: 400px;
+  max-width: 100%;
   cursor: default;
 }
 .l-canvas .logo-block img {
