@@ -473,6 +473,17 @@ body {
   text-align: center;
   aspect-ratio: 4/3;
   overflow: hidden;
+  position: relative;
+}
+.logo-block-inner:after {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  background-image: url(/watermark.png);
+  background-repeat: repeat-x;
+  background-size: auto 30px;
+  filter: brightness(50%);
 }
 .l-settings__wrap {
   display: flex;
