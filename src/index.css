@@ -483,7 +483,9 @@ body {
   background-image: url(/watermark.png);
   background-repeat: repeat-x;
   background-size: auto 30px;
-  filter: brightness(50%);
+  filter: brightness(95%);
+  transform: rotate(-40deg);
+  opacity: 0.5;
 }
 .l-settings__wrap {
   display: flex;
