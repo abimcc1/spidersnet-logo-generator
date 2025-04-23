@@ -4,6 +4,7 @@ import StepIndicator from "../components/StepIndicator.jsx";
 import LogoCanvas from "../components/LogoCanvas.jsx";
 import { iconOptions } from '../iconOptions.jsx';
 import CompanyNameInput from "../components/CompanyNameInput.jsx";
+import SloganInput from "../components/SloganInput.jsx";
 import FontDropdown from "../components/FontDropdown.jsx";
 import { fontOptions } from '../fontOptions.jsx';
 import FontColorDropdown from "../components/FontColorDropdown.jsx";
@@ -43,6 +44,8 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                         updateCompanyName={updateCompanyName} 
                         />
                     </div>
+
+                     {icon.slogan && <div className="settings-field"><label>Change Slogan</label><SloganInput slogan={slogan}  updateSlogan={updateSlogan} /></div>}
 
                     <div className="settings-field">
                         <label>Change Font</label>
