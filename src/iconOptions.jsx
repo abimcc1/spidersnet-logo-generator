@@ -267,11 +267,13 @@ export const iconOptions = [
     },
     {
         id: 32,
+        url: "icons/icon_32.png",
         category: "typographic",
         slogan: true,
         fontFamily: "Blinker",
         fontSize: 25,
         fontSpacing: 0.5,
+        note: "The initial will be changed to match your company name by the designer",
     },
     {
         id: 33,
@@ -307,6 +309,7 @@ export const iconOptions = [
         fontFamily: "Palanquin Dark",
         fontSize: 28,
         fontSpacing: 1.5,
+        note: "The year can be changed by the designer",
     },
     {
         id: 37,
@@ -334,6 +337,7 @@ export const iconOptions = [
         fontFamily: "Aoboshi One",
         fontSize: 23,
         fontSpacing: 3,
+        note: "The initial will be changed to match your company name by the designer",
     },
     {
         id: 40,

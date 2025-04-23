@@ -475,6 +475,24 @@ body {
   overflow: hidden;
   position: relative;
 }
+.logo-block-note {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  padding: 10px;
+  line-height: 1;
+  color: #999;
+}
+.l-canvas .logo-block .logo-block-note img,
+.logo-block .logo-block-note img {
+  visibility: visible;
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
+  margin-right: 2px;
+}
 .logo-block-inner:after {
   content: '';
   position: absolute;
@@ -518,7 +536,7 @@ body {
   }
 }
 .l-canvas .logo-block {
-  width: 400px;
+  width: 500px;
   max-width: 100%;
   cursor: default;
 }

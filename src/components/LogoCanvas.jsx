@@ -109,6 +109,7 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
                     </div>
               </div> 
               </div>
+              {icon.note && <div className="logo-block-note"><img src="/tip.svg" />{icon.note}</div>}
             </div>
           
 

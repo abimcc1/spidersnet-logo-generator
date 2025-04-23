@@ -32,7 +32,7 @@
 .logo-block .style-1 .icon-wrapper {
     margin-right: 15px;
 }
-.logo-block .style-1 span {
+.logo-block .style-1 span:first-child {
     display: block;
 }
 .logo-block .style-2 {
@@ -55,15 +55,16 @@
     display: flex;
     align-items: center;
     font-style: italic;
+    line-height: 1;
 }
 .logo-block .style-3 .title-wrap {
     margin-left: -205px;
     margin-bottom: 5px;
     padding-right: 5px;
 }
-.logo-block .style-3 span:not(:first-child) {
+/* .logo-block .style-3 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-4 {
     font-family: "Rubik Mono One", monospace;
     text-transform: uppercase;
@@ -112,9 +113,9 @@
 .logo-block .style-6 .company-name {
     padding-right: 5px;
 }
-.logo-block .style-6 span:not(:first-child) {
+/* .logo-block .style-6 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-6 .slogan {
     font-size: 14px;
     font-weight: 300;
@@ -177,9 +178,9 @@
     right: -30px;
     top: -35px;
 }
-.logo-block .style-9 span:not(:first-child) {
+/* .logo-block .style-9 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-9 .slogan {
     font-size: 15px;
     font-weight: 300;
@@ -221,7 +222,7 @@
 .logo-block .style-12 .icon-wrapper {
     margin-right: 15px;
 }
-.logo-block .style-12 span {
+.logo-block .style-12 span:first-child {
     display: block;
 }
 .logo-block .style-13 {
@@ -283,7 +284,7 @@
     display: flex;
     align-items: center;
 }
-.logo-block .style-16 span {
+.logo-block .style-16 span:first-child {
     display: block;
 }
 .logo-block .style-16 .icon-wrapper {
@@ -436,7 +437,7 @@
     text-align: left;
     line-height: 1;
 }
-.logo-block .style-25 span {
+.logo-block .style-25 span:first-child {
     display: block;
 }
 .logo-block .style-25 .slogan {
@@ -573,7 +574,7 @@
 .logo-block .style-30 span:not(:first-child) {
     font-weight: 300;
 }
-.logo-block .style-30 span:not(:first-child):before {
+.logo-block .style-30 span:first-child:after {
     content: '';
     height: 50px;
     width: 1px;
@@ -603,19 +604,24 @@
     border: 1px solid #000;
     
 }
-.logo-block .style-31 span:not(:first-child) {
+/* .logo-block .style-31 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-32 {
     font-family: "Blinker", sans-serif;
     font-size: 25px;
     letter-spacing: 0.5px;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
+    line-height: 1;
 }
-.logo-block .style-32 span:not(:first-child) {
+.logo-block .style-32 .icon-wrapper {
+    margin-top: 8px;
+    margin-right: 7px;
+}
+/* .logo-block .style-32 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-32 .slogan {
     font-size: 16px;
     font-weight: 300;
@@ -635,7 +641,7 @@
 .logo-block .style-33 span:not(:first-child) {
     font-weight: 300;
 }
-.logo-block .style-33 span:not(:first-child):before {
+.logo-block .style-33 span:first-child:after {
     content: '';
     height: 50px;
     width: 1px;
@@ -712,9 +718,9 @@
     display: flex;
     align-items: center;
 }
-.logo-block .style-38 span:not(:first-child) {
+/* .logo-block .style-38 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-38 .icon-wrapper {
     order: 2;
 }
@@ -748,8 +754,11 @@
     line-height: 1;
     font-style: italic;
 }
-.logo-block .style-40 span {
+.logo-block .style-40 span:first-child {
     display: block;
+    padding-right: 5px;
+}
+.logo-block .style-40 span:last-child {
     padding-right: 5px;
 }
 .logo-block .style-40 span:not(:first-child) {
@@ -765,9 +774,9 @@
     align-items: center;
     text-transform: uppercase;
 }
-.logo-block .style-41 span:not(:first-child) {
+/* .logo-block .style-41 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-41 .slogan {
     font-size: 12px;
     letter-spacing: 0.5px;
@@ -787,9 +796,9 @@
     text-transform: uppercase;
     position: relative;
 }
-.logo-block .style-42 span:not(:first-child) {
+/* .logo-block .style-42 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-42 .icon-wrapper {
     position: absolute;
     left: -28px;
@@ -837,7 +846,7 @@
     margin-left: 10px;
     margin-top: -5px;
 }
-.logo-block .style-44 span {
+.logo-block .style-44 span:first-child {
     display: block;
 }
 .logo-block .style-45 {
@@ -892,9 +901,9 @@
     line-height: 1;
     text-transform: uppercase;
 }
-.logo-block .style-47 span:not(:first-child) {
+/* .logo-block .style-47 span:not(:first-child) {
     display: none;
-}
+} */
 .logo-block .style-47 .title-wrap {
     position: absolute;
     left: 0;
