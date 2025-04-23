@@ -33,9 +33,10 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
                       {icon.slogan && <div className="slogan">{slogan}</div>}
                     </div>
               </div>
-              </div>
 
               {icon.note && <div className="logo-block-note"><img src="/tip.svg" />{icon.note}</div>}
+              </div>
+
               
             </div>
           

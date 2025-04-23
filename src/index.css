@@ -484,6 +484,8 @@ body {
   padding: 10px;
   line-height: 1;
   color: #999;
+  background: #fff;
+  z-index: 1;
 }
 .l-canvas .logo-block .logo-block-note img,
 .logo-block .logo-block-note img {
