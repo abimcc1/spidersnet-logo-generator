@@ -29,7 +29,10 @@ function LogoBlock({ companyName, slogan, icon, setSelectedLogo, navigateTo }) {
                 <div className={`style-${icon.id}`}>
                     {icon.url && <div id="iconWrapper" className="icon-wrapper" style={IconStyle}><img id="maskImage" src={icon.url} /></div>}
                     <div className="title-wrap">
+                    <div className="company-name-border" >
+                    <div className="company-name-wrapper" >
                       <div className="company-name"><WordWrapper text={companyName} /></div>
+                      </div></div>
                       {icon.slogan && <div className="slogan">{slogan}</div>}
                     </div>
               </div>

@@ -163,7 +163,6 @@ export const iconOptions = [
     },
     {
         id: 19,
-        url: "icons/style_19.png",
         category: "typographic",
         slogan: true,
         fontFamily: "Cardo",
@@ -188,7 +187,6 @@ export const iconOptions = [
     },
     {
         id: 22,
-        url: "icons/icon_22.svg",
         category: "typographic",
         slogan: true,
         fontFamily: "Montserrat",
