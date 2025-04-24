@@ -10,7 +10,7 @@ import CreateTicketButton from "../components/CreateTicketButton.jsx";
 
 // import SubmitForm from "../components/SubmitForm.jsx";
 
-function Screen5({ navigateTo, currentScreen, completedSteps, companyName, slogan, selectedLogo, logoFont, selectedFont, fontColour, accentColour, logoFontSize, logoFontSpacing }) {
+function Screen5({ navigateTo, currentScreen, completedSteps, companyName, slogan, selectedLogo, logoFont, selectedFont, fontColour, sloganColour, accentColour, logoFontSize, logoFontSpacing }) {
 
   const selectedLogoInt = +selectedLogo;
   const icon = iconOptions.find(item => item.id === selectedLogoInt);

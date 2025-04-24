@@ -8,12 +8,13 @@ import SloganInput from "../components/SloganInput.jsx";
 import FontDropdown from "../components/FontDropdown.jsx";
 import { fontOptions } from '../fontOptions.jsx';
 import FontColorDropdown from "../components/FontColorDropdown.jsx";
+import SloganColorDropdown from "../components/SloganColorDropdown.jsx";
 import AccentColorDropdown from "../components/AccentColorDropdown.jsx";
 import FontSizeDropdown from "../components/FontSizeDropdown.jsx";
 import FontSpacingDropdown from "../components/FontSpacingDropdown.jsx";
 
 
-function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updateCompanyName, slogan, updateSlogan, selectedLogo, logoFont, updateLogoFont, selectedFont, fontColour, updateFontColour, accentColour, updateAccentColour, logoFontSize, updateLogoFontSize, logoFontSpacing, updateLogoFontSpacing }) {
+function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updateCompanyName, slogan, updateSlogan, selectedLogo, logoFont, updateLogoFont, selectedFont, fontColour, updateFontColour, sloganColour, updateSloganColour, accentColour, updateAccentColour, logoFontSize, updateLogoFontSize, logoFontSpacing, updateLogoFontSpacing }) {
 
     const icon = iconOptions.find(item => item.id === selectedLogo);
 
@@ -83,6 +84,8 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                         />
                     </div>
 
+                    {icon.slogan && <div className="settings-field"><label>Slogan Colour</label><SloganColorDropdown sloganColour={sloganColour} updateSloganColour={updateSloganColour} /></div>}
+
                     <div className="settings-field">
                         <label>Accent Colour</label>
                         <AccentColorDropdown
@@ -102,6 +105,7 @@ function Screen4({ navigateTo, currentScreen, completedSteps, companyName, updat
                     navigateTo={navigateTo}
                     fontFamily={selectedFont?.fontfamily}
                     fontColour={fontColour}
+                    sloganColour={sloganColour}
                     accentColour={accentColour}
                     logoFontSize={logoFontSize}
                     logoFontSpacing={logoFontSpacing}

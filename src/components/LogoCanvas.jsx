@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { colorOptions } from '../colorOptions.jsx';
 
-function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentColour, logoFontSize, logoFontSpacing, divRef }) {
+function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, sloganColour, accentColour, logoFontSize, logoFontSpacing, divRef }) {
 
   function WordWrapper({ text }) {
     // Split the text into words and wrap each word in a span
@@ -13,6 +13,7 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
 
 
   const [accentStyle, setAccentStyle] = useState('solid');
+  const [sloganStyle, setSloganStyle] = useState('solid');
   const [fontStyle, setFontStyle] = useState('solid');
 
   const getAccentColourStyle = (color) => {
@@ -23,6 +24,15 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
     const style = getAccentColourStyle(accentColour); 
     setAccentStyle(style); 
   }, [accentColour]);
+
+  const getSloganColourStyle = (color) => {
+    const colorMatch = colorOptions.find(item => item.code === color);
+    return colorMatch ? colorMatch.style : 'solid';
+  };
+  useEffect(() => {
+    const style = getSloganColourStyle(sloganColour); 
+    setSloganStyle(style); 
+  }, [sloganColour]);
 
   const getFontColourStyle = (color) => {
     const colorMatch = colorOptions.find(item => item.code === color);
@@ -71,9 +81,9 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, accentC
 
     const dynamicSloganStyle  = {
       ...(
-        accentColour !== "default" && {
-          backgroundColor: accentStyle === "solid" ? accentColour : "transparent", 
-          backgroundImage: accentStyle === "solid" ? "none" : accentColour, 
+        sloganColour !== "default" && {
+          backgroundColor: sloganStyle === "solid" ? sloganColour : "transparent", 
+          backgroundImage: sloganStyle === "solid" ? "none" : sloganColour, 
         }
       ),
       backgroundSize: '100%', 

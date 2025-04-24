@@ -81,6 +81,11 @@ function App() {
     setFontColour(newColour);
   };
 
+  const [sloganColour, setSloganColour] = useState("default"); 
+  const updateSloganColour = (newColour) => {
+    setSloganColour(newColour);
+  };
+
   const [accentColour, setAccentColour] = useState("default"); 
   const updateAccentColour = (newColour) => {
     setAccentColour(newColour);
@@ -181,6 +186,8 @@ function App() {
                                         selectedFont={selectedFont}
                                         fontColour={fontColour}
                                         updateFontColour={updateFontColour}
+                                        sloganColour={sloganColour}
+                                        updateSloganColour={updateSloganColour}
                                         accentColour={accentColour}
                                         updateAccentColour={updateAccentColour}
                                         logoFontSize={logoFontSize}
@@ -199,6 +206,7 @@ function App() {
                                         logoFont={logoFont}
                                         selectedFont={selectedFont}
                                         fontColour={fontColour}
+                                        sloganColour={sloganColour}
                                         accentColour={accentColour}
                                         logoFontSize={logoFontSize}
                                         logoFontSpacing={logoFontSpacing}
