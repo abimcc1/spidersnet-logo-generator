@@ -163,6 +163,7 @@ export const iconOptions = [
     },
     {
         id: 19,
+        url: "icons/style_19.png",
         category: "typographic",
         slogan: true,
         fontFamily: "Cardo",
@@ -187,6 +188,7 @@ export const iconOptions = [
     },
     {
         id: 22,
+        url: "icons/icon_22.svg",
         category: "typographic",
         slogan: true,
         fontFamily: "Montserrat",
@@ -273,7 +275,7 @@ export const iconOptions = [
         fontFamily: "Blinker",
         fontSize: 25,
         fontSpacing: 0.5,
-        note: "The initial will be changed to match your company name by the designer",
+        note: "The initial will be changed by our designers",
     },
     {
         id: 33,
@@ -309,7 +311,7 @@ export const iconOptions = [
         fontFamily: "Palanquin Dark",
         fontSize: 28,
         fontSpacing: 1.5,
-        note: "The year can be changed by the designer",
+        note: "The year will be changed by our designers",
     },
     {
         id: 37,
@@ -337,7 +339,7 @@ export const iconOptions = [
         fontFamily: "Aoboshi One",
         fontSize: 23,
         fontSpacing: 3,
-        note: "The initial will be changed to match your company name by the designer",
+        note: "The year will be changed by our designers",
     },
     {
         id: 40,
