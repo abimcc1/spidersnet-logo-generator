@@ -433,7 +433,7 @@ body {
 }
 .logo-block {
   position: relative;
-  width: calc(33% - 10px);
+  width: calc(33% - 11px);
   cursor: pointer;
   @media screen and (max-width: 600px) {
     width: 100%;

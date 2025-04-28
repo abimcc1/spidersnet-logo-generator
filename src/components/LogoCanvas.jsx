@@ -3,6 +3,31 @@ import { colorOptions } from '../colorOptions.jsx';
 
 function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, sloganColour, accentColour, logoFontSize, logoFontSpacing, divRef }) {
 
+  const [scale, setScale] = useState(1); // State to control the scaling
+  const logoBlockRef = useRef(null); // Ref for the logo-block element
+  const logoInnerRef = useRef(null); // Ref for the logo-block element
+
+  // Function to calculate the scaling factor based on available width
+  const calculateScale = () => {
+    const logoBlockWidth = logoBlockRef.current ? logoBlockRef.current.offsetWidth - 40 : 0;
+    const logoInnerWidth = logoInnerRef.current ? logoInnerRef.current.offsetWidth : 0;
+
+    // If the inner logo content exceeds the outer container width, scale it down
+    const newScale = logoBlockWidth < logoInnerWidth ? logoBlockWidth / logoInnerWidth : 1;
+    setScale(newScale);
+  };
+
+  // Recalculate scale when the component mounts or the window resizes
+  useEffect(() => {
+    calculateScale();
+    window.addEventListener('resize', calculateScale);
+
+    return () => {
+      window.removeEventListener('resize', calculateScale);
+    };
+  }, []);
+
+
   function WordWrapper({ text }) {
     // Split the text into words and wrap each word in a span
     const wrappedWords = text.split(' ').map((word, index) => (
@@ -87,16 +112,22 @@ function LogoCanvas({ companyName, slogan, icon, fontFamily, fontColour, sloganC
       letterSpacing: `${logoFontSpacing}px`,
     }
 
+    const combinedStyle = {
+    ...dynamicAccentStyle,
+    transform: `scale(${scale})`,
+  };
+
 
     return (
       <> 
 
-            <div className="logo-block" key={icon.id}>
+            <div className="logo-block" key={icon.id} ref={logoBlockRef}>
               <div className="logo-block-inner">
                  <div 
                  className={`style-${icon.id}`} 
-                 ref={divRef} 
-                 style={ dynamicAccentStyle } >
+                 ref={logoInnerRef} 
+                 style={ combinedStyle }
+                 >
                     {icon.url && <div id="iconWrapper" className="icon-wrapper" style={dynamicIconStyle}><img id="maskImage" src={icon.url} /></div>}
                     <div className="title-wrap">
                     <div className="company-name-border" >

@@ -1,12 +1,15 @@
 .logo-block-inner > div {
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    transition: transform 0.2s ease;
 }
 .logo-block img {
     visibility: hidden;
 }
 .logo-block .icon-wrapper {
     mask-repeat: no-repeat;
+    mask-position: center;
     background-color: #000;
 }
 .logo-block .company-name,
@@ -75,7 +78,7 @@
     display: flex;
     align-items: center;
 }
-.logo-block .style-4 .title-wrap {
+.logo-block .style-4 .icon-wrapper {
     position: absolute;
     left: 0;
     right: 0;
