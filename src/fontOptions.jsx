@@ -24,6 +24,12 @@ export const fontOptions = [
     stroke: "monospace"
 },
 {
+    id: "Rubik",
+    import: `@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');`,
+    fontfamily: "Rubik",
+    stroke: "sans-serif"
+},
+{
     id: "Spinnaker",
     import: `@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');`,
     fontfamily: "Spinnaker",

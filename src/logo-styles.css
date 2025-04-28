@@ -687,28 +687,26 @@
     font-weight: 300;
 }
 .logo-block .style-33 {
-    font-family: "Outfit", sans-serif;
-    font-size: 23px;
-    letter-spacing: 3.5px;
-    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     position: relative;
+    flex-direction: column;
 }
-.logo-block .style-33 .company-name {
-    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
- }
-.logo-block .style-33 span:not(:first-child) {
-    font-weight: 300;
+.logo-block .style-33 .title-wrap {
+    border-bottom: 1px solid #000;
+    border-color: var(--accent-color, #000);
+    border-image: var(--accent-bg);
+    border-image-slice: 1;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
-.logo-block .style-33 span:first-child:after {
-    content: '';
-    height: 50px;
-    width: 1px;
-    background: #000;
-    position: absolute;
-    top: -9px;
-    margin-left: -6px;
+.logo-block .style-33 .icon-wrapper {
+    width: 100%;
+    mask-size: auto 100%;
 }
 .logo-block .style-34 {
     font-family: "Cardo", sans-serif;
@@ -921,12 +919,12 @@
     line-height: 1;
     text-transform: uppercase;
 }
-.logo-block .style-45 .title-wrap {
+.logo-block .style-45 .icon-wrapper {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: -14px;
+    top: -45px;
 }
 .logo-block .style-45 span:not(:first-child) {
     font-weight: 400;
@@ -967,59 +965,44 @@
 /* .logo-block .style-47 span:not(:first-child) {
     display: none;
 } */
-.logo-block .style-47 .title-wrap {
+.logo-block .style-47 .icon-wrapper {
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    margin-top: 10px;
+    top: -47px;
 }
 .logo-block .style-48 {
-    font-family: "Archivo Black", sans-serif;
-    font-size: 36px;
-    font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
     text-align: left;
-    line-height: 1;
     text-transform: uppercase;
 }
-.logo-block .style-48 span:not(:first-child) {
-    display: none;
-}
-.logo-block .style-48 .title-wrap {
-    margin-left: -70px;
-    margin-bottom: 10px;
+.logo-block .style-48 .icon-wrapper {
+    margin-right: 10px;
 }
 .logo-block .style-48 .slogan {
-    font-family: "Archivo", sans-serif;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
+}
+.logo-block .style-49 {
+    font-family: "Fredoka", sans-serif;
+    font-size: 21px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    flex-direction: column;
+}
+.logo-block .style-49 .icon-wrapper {
+    margin-bottom: 5px;
+}
+.logo-block .style-49 .slogan {
+    font-size: 12px;
+    font-weight: 400;
     letter-spacing: 2px;
-    margin-left: 40px;
-    margin-top: 3px;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
-    background-size: 100%;
-    -webkit-background-clip: initial !important;
-    -moz-background-clip: text !important;
-    -webkit-text-fill-color: #fff;
-    -moz-text-fill-color: #fff;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    position: relative;
-    padding-left: 15px;
+    margin-top: 5px;
 }
-.logo-block .style-48 .slogan:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: calc(100% - 10px);
-    width: 20px;
-    -webkit-transform: skew(-40deg);
-    -moz-transform: skew(-40deg);
-    -o-transform: skew(-40deg);
-    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
-}
-.logo-block .style-48 .icon-wrapper {
-    background-image: linear-gradient(180deg, #AEACB9 0%, #17191C 100%);
-}
+

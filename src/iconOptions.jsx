@@ -277,11 +277,12 @@ export const iconOptions = [
     },
     {
         id: 33,
+        url: "icons/icon_33.svg",
         category: "typographic",
         slogan: false,
         fontFamily: "Outfit",
-        fontSize: 23,
-        fontSpacing: 3.5,
+        fontSize: 25,
+        fontSpacing: 2.5,
     },
     {
         id: 34,
@@ -416,9 +417,18 @@ export const iconOptions = [
         url: "icons/icon_48.svg",
         category: "abstract",
         slogan: true,
-        fontFamily: "Archivo Black",
-        fontSize: 36,
-        fontSpacing: 0,
+        fontFamily: "Outfit",
+        fontSize: 22,
+        fontSpacing: 2,
+    },
+    {
+        id: 49,
+        url: "icons/icon_49.svg",
+        category: "abstract",
+        slogan: true,
+        fontFamily: "Fredoka",
+        fontSize: 21,
+        fontSpacing: 4,
     },
 
 ]
